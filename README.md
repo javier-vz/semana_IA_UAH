@@ -1,10 +1,10 @@
 # Redes, conocimiento situado e inteligencia artificial
 
-**Dos actividades en la II Semana de la Inteligencia Artificial de la Universidad Alberto Hurtado (UAH), Chile — 26 al 30 de octubre de 2026.**
+**Actividades en la II Semana de la Inteligencia Artificial de la Universidad Alberto Hurtado (UAH), Chile — 26 al 30 de octubre de 2026.**
 
 Este repositorio reúne las presentaciones, ejemplos, materiales metodológicos y recursos de dos actividades complementarias sobre grafos de conocimiento, análisis de redes e inteligencia artificial en investigación social.
 
-La idea que articula ambas propuestas es sencilla: **estudiar las relaciones permite formular preguntas nuevas sobre el conocimiento, los textos, los territorios y las prácticas sociales**. La inteligencia artificial puede asistir en la organización y exploración de la información, mientras que las decisiones de investigación y la interpretación de los resultados permanecen explícitas y sujetas a revisión.
+La idea que articula ambas propuestas es simple: **estudiar las relaciones permite formular preguntas nuevas sobre el conocimiento, los textos, los territorios y las prácticas sociales**. La inteligencia artificial puede asistir en la organización y exploración de la información, mientras que las decisiones de investigación y la interpretación de los resultados permanecen explícitas y sujetas a revisión.
 
 **Expositor:** Javier Vera, Universidad Tecnológica del Perú (UTP).  
 **Colaboración en las investigaciones y materiales:** Dina Cornejo Meza y Javier Vera, en diálogo con los equipos y comunidades vinculados a cada proyecto.  
