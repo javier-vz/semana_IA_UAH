@@ -1,0 +1,11 @@
+source,target,tipo,peso
+a,b,colaboracion,1
+a,c,colaboracion,1
+b,c,colaboracion,1
+b,d,colaboracion,1
+c,d,colaboracion,1
+d,e,colaboracion,1
+e,f,colaboracion,1
+e,g,colaboracion,1
+f,g,colaboracion,1
+g,h,colaboracion,1
