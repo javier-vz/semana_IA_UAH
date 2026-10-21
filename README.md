@@ -1,20 +1,20 @@
 # Redes, conocimiento situado e inteligencia artificial
 
-**Dos actividades en la II Semana de la Inteligencia Artificial de la Universidad Alberto Hurtado (UAH), Chile — 26 al 30 de octubre de 2026.**
+**Actividades en la II Semana de la Inteligencia Artificial de la Universidad Alberto Hurtado (UAH), Chile - 26 al 30 de octubre de 2026.**
 
 Este repositorio reúne las presentaciones, ejemplos, materiales metodológicos y recursos de dos actividades complementarias sobre grafos de conocimiento, análisis de redes e inteligencia artificial en investigación social.
 
-La idea que articula ambas propuestas es sencilla: **estudiar las relaciones permite formular preguntas nuevas sobre el conocimiento, los textos, los territorios y las prácticas sociales**. La inteligencia artificial puede asistir en la organización y exploración de la información, mientras que las decisiones de investigación y la interpretación de los resultados permanecen explícitas y sujetas a revisión.
+La idea que articula ambas propuestas es simple: **estudiar las relaciones permite formular preguntas nuevas sobre el conocimiento, los textos, los territorios y las prácticas sociales**. La inteligencia artificial puede asistir en la organización y exploración de la información, mientras que las decisiones de investigación y la interpretación de los resultados permanecen explícitas y sujetas a revisión.
 
-**Expositor:** Javier Vera, Universidad Tecnológica del Perú (UTP).  
+**Expositor:** Javier Vera Zúñiga, Universidad Tecnológica del Perú (UTP).  
 **Evento:** [II Semana de la Inteligencia Artificial UAH](https://www.uahurtado.cl/semana-de-la-ia-2026/).
 
 ## Actividades
 
 | Fecha | Actividad | Modalidad y público | Materiales |
 |---|---|---|---|
-| **Miércoles 28 de octubre, 10:00–11:00 h (Chile)** | **Un grafo construido entre muchos: inteligencia artificial y conocimiento situado en Qoyllur Rit’i** | Conferencia, programación general de la Semana de la IA | [01 · Conferencia](01-conferencia-qoylluriti/README.md) |
-| **Viernes 30 de octubre, 10:00–12:00 h (Chile)** | **Análisis de redes para la investigación social: métodos, casos y herramientas en tiempos de inteligencia artificial** | Taller FACSO; modalidad híbrida (presencial y en línea), según coordinación con la facultad | [02 · Taller](02-taller-analisis-redes/README.md) |
+| **Miércoles 28 de octubre, 10:00–11:00 h (Chile)** | **Un grafo construido entre muchos: inteligencia artificial y conocimiento situado en Qoyllur Rit’i** | Conferencia, programación general de la Semana de la IA | [01 - Conferencia](01-conferencia-qoylluriti/README.md) |
+| **Viernes 30 de octubre, 10:00–12:00 h (Chile)** | **Análisis de redes para la investigación social: métodos, casos y herramientas en tiempos de inteligencia artificial** | Taller FACSO; modalidad híbrida (presencial y en línea), según coordinación con la facultad | [02 - Taller](02-taller-analisis-redes/README.md) |
 
 > La conferencia del miércoles figura en el programa público de la UAH. Los datos del taller del viernes corresponden a la coordinación con FACSO y pueden actualizarse si cambia su difusión institucional.
 
@@ -22,7 +22,7 @@ La idea que articula ambas propuestas es sencilla: **estudiar las relaciones per
 
 ### 01. Conferencia: un grafo construido entre muchos
 
-La conferencia explora cómo representar relaciones entre actores, lugares, prácticas, fuentes y saberes vinculados a la festividad del Señor de Qoyllur Rit'i. Interesa especialmente la construcción situada del conocimiento: de qué fuentes procede la información, quién interviene en su organización y qué puede —y qué no puede— aportar la inteligencia artificial.
+La conferencia explora cómo representar relaciones entre actores, lugares, prácticas, fuentes y saberes vinculados a la festividad del Señor de Qoyllur Rit'i (Perú). Interesa especialmente la construcción situada del conocimiento: de qué fuentes procede la información, quién interviene en su organización y qué puede -y qué no puede- aportar la inteligencia artificial.
 
 [Ver presentación y organización de contenidos →](01-conferencia-qoylluriti/README.md)
 
