@@ -1,48 +1,44 @@
-# Conferencia · Un grafo construido entre muchos
+# Conferencia UAH 2026 · HTML revisado
 
-**Título oficial:** Un grafo construido entre muchos: inteligencia artificial y conocimiento situado en Qoyllur Rit’i  
-**Fecha:** Miércoles 28 de octubre de 2026  
-**Hora:** 10:00–11:00 h (Chile)  
-**Lugar indicado en el programa UAH:** Auditorio Manuel Larraín (Sala E11)  
-**Expositor:** Javier Vera
+**Un grafo construido entre muchos: inteligencia artificial y conocimiento situado en Qoyllur Rit’i**  
+II Semana de la Inteligencia Artificial · Universidad Alberto Hurtado · 28 de octubre de 2026.
 
-[Volver al inicio](../README.md)
+Este paquete **amplía el apunte UNESCO original** a un recurso web de siete partes. No utiliza las diapositivas PPTX criticadas.
 
-## Enfoque
+## Contenido
 
-La conferencia toma como punto de partida el trabajo con un grafo de conocimiento de la festividad del Señor de Qoyllur Rit'i. Se propone mostrar cómo se organizan y articulan referencias a lugares, actores, prácticas, recorridos y fuentes, y qué preguntas emergen al representarlas como relaciones explícitas.
+- `index.html`: documento principal, con navegación, figuras ampliables, modo lectura y modo exposición. Funciona localmente, sin instalar paquetes.
+- `apunte_UNESCO_original.html`: copia intacta del apunte original compartido por el autor.
+- `assets/`: fotografías y figuras extraídas del apunte, mapas aportados y gráficos de artículos, con créditos en la página.
+- `mapa-narrativo-2026/index.html`: mapa interactivo aportado del recorrido 2026, con sus datos y fotografías.
+- `puntos_referencia_2026.gpx`: favoritos/puntos de referencia; **no** representan la ruta GPS completa.
 
-Una dimensión central es el **carácter situado y colectivo del conocimiento**: quién aporta información, con qué criterios se traduce a una estructura computacional y cómo reconocer límites, ausencias y decisiones de modelado. La inteligencia artificial puede apoyar tareas de extracción, búsqueda y exploración, sin sustituir la interpretación y validación de las fuentes.
+## Integración a GitHub
 
-Este texto es una **guía editorial de trabajo** para preparar la presentación; no pretende reemplazar un resumen oficial previamente enviado.
+Este ZIP está organizado para **fusionarse con** `javier-vz/semana_IA_UAH`, sin borrar el taller `02-taller-analisis-redes` ni otros archivos. Copiar la carpeta `01-conferencia-qoylluriti/` a la raíz del repositorio y conservar las demás carpetas. En GitHub Pages, abrir:
 
-## Preguntas orientadoras
+`https://javier-vz.github.io/semana_IA_UAH/01-conferencia-qoylluriti/`
 
-1. ¿Cómo se representa un conjunto heterogéneo de personas, lugares, prácticas y fuentes en un grafo de conocimiento?
-2. ¿Qué se gana —y qué se simplifica— cuando se transforma una práctica cultural en entidades y relaciones?
-3. ¿Cómo documentar autorías, procedencias y decisiones de representación?
-4. ¿Qué formas de exploración facilita la IA y qué controles humanos exige?
-5. ¿Cómo devolver los resultados mediante interfaces o materiales legibles fuera del ámbito técnico?
+Si aún no está activo Pages, en GitHub usar Settings → Pages → Deploy from a branch → `main` / `(root)`.
 
-## Recorrido sugerido para la conferencia
+## Fuentes y decisiones de integridad
 
-| Tramo | Tiempo orientativo | Contenido |
-|---|---:|---|
-| Apertura | 5 min | La festividad y la pregunta de investigación |
-| Del registro al grafo | 10 min | Fuentes, entidades, relaciones y procedencia |
-| El grafo en funcionamiento | 15 min | Ejemplos de consulta, conexiones y visualización |
-| IA y conocimiento situado | 10 min | Asistencia, validación, decisiones y límites |
-| Formas de devolución | 10 min | Explorador, mapas y posibles formatos editoriales |
-| Preguntas | 10 min | Conversación con el público |
+1. Artículo UNESCO DOI `10.1038/s40494-026-02400-2`: coocurrencia de metadatos, Louvain, entropía. Sus datos y figuras se reproducen desde el apunte original.
+2. Artículo Wikidata DOI `10.1057/s41599-026-08715-6`: muestra de 228 nodos, 495 aristas; **no** se confunde ausencia en la muestra con ausencia cultural.
+3. Manuscrito *Situated Knowledge in Knowledge Graphs*, 19 de octubre 2026: describe el grafo situado construido a partir de trabajo de campo de **2025**, con límites de cobertura y 16 consultas evaluadas. El manuscrito no se presenta como publicación revisada por pares.
+4. Rutas y fotografía de **2026**: documentación complementaria, **no** validación retrospectiva del grafo 2025.
+5. Google Scholar de Dina Cornejo Meza incorporado: `https://scholar.google.com/citations?user=jEJ18MwAAAAJ&hl=es`.
 
-Los tiempos son una propuesta para organizar los 60 minutos; se ajustarán al programa y al material disponible.
+No publicar automáticamente todo bajo una licencia abierta sin comprobar antes derechos editoriales de las figuras, consentimiento de personas fotografiadas y sensibilidad de algunos recorridos rituales.
 
-## Materiales
 
-- `diapositivas/`: presentación de la conferencia, por incorporar.
-- `figuras/`: mapas, diagramas y fotografías cuya difusión esté autorizada, por incorporar.
-- [`demo/README.md`](demo/README.md): repositorios, explorador y recomendaciones para la demostración.
+## Actualización: visualizaciones y herramientas (27/10/2026)
 
-## Mensaje para enlazar con el taller del viernes
+La sección de introducción a grafos ahora usa **las figuras empíricas originales de los artículos** en vez de los diagramas ilustrativos de tres y dos nodos. Muestra por separado la red UNESCO (220 descriptores primarios, 1.026 conexiones) y la figura del grafo situado del manuscrito (87 individuos en el modelo, 15 clases); la última figura representa un conjunto de relaciones, no todo el grafo completo. Ambas imágenes se pueden ampliar.
 
-Este caso profundiza en un objeto cultural y una estrategia de representación. El taller del viernes amplía el enfoque hacia **encuestas, bibliometría y textos** para mostrar cómo adaptar el análisis de redes a diferentes preguntas sociales.
+Accesos visibles al comienzo y junto a las redes:
+
+- Grafo interactivo: https://javier-vz.github.io/kg-llm/grafo_interactivo.html
+- App experimental Qoyllur Rit’i Explorer: https://qoyllurity.streamlit.app/
+
+La app está enlazada pero su disponibilidad online depende de Streamlit.
