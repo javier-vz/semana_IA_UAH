@@ -55,7 +55,12 @@ function pinHtml(num,on){return `<div class="stop-pin ${on?'selected':''}">${num
 if(typeof L!=='undefined'){
  map=L.map('map',{zoomControl:false,scrollWheelZoom:false,preferCanvas:true});
  L.control.zoom({position:'bottomright'}).addTo(map);
- L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap &copy; CARTO',subdomains:'abcd'}).addTo(map);
+ // Mapa base OpenStreetMap: no requiere clave API. Las trazas GPX permanecen intactas.
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+   maxZoom:19,
+   subdomains:'abc',
+   attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a>'
+  }).addTo(map);
  routes.forEach(r=>{
   let p=L.polyline(r.points,{color:palette[r.phase],weight:3.5,opacity:.8,interactive:true,lineCap:'round',lineJoin:'round'}).addTo(map);p.bindTooltip(safe(r.name),{sticky:true});polylines.push({el:p,phase:r.phase});
  });

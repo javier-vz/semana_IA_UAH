@@ -67,6 +67,69 @@ body.proyeccion .page{max-width:1390px;padding:clamp(24px,4vw,90px)}body.proyecc
 .hero-actions a:hover{background:#28696a;color:white}
 @media(max-width:730px){.graph-heading{display:block;padding:20px}.graph-fact{display:flex;gap:8px;flex-wrap:wrap;align-items:baseline;margin-top:15px}.graph-fact b{font-size:20px}.graph-stage{padding:9px}.graph-panel figcaption{padding:13px 20px}.research-tools{grid-template-columns:1fr}}
 @media print{.research-tools{break-inside:avoid}.research-tool{border:1px solid #ccc}.graph-stage img{max-height:56vh}.graph-compare{gap:22px}}
+
+/* Capítulo 02: explicación gráfica, diferenciada de las figuras empíricas posteriores. */
+.graph-basics{display:grid;grid-template-columns:1.05fr 1fr 1fr;gap:12px;margin:30px 0 24px;font-family:Arial,Helvetica,sans-serif}
+.graph-math,.graph-concept{border:1px solid #dce9e6;background:#f5f9f8;border-radius:12px;padding:19px;min-height:130px}
+.graph-math{background:#12343a;color:white;display:flex;flex-direction:column;justify-content:center;gap:10px}
+.graph-math span{font:800 clamp(28px,3vw,36px)/1 Arial,sans-serif;letter-spacing:-.04em}
+.graph-math small{font:14px/1.43 Arial,sans-serif;color:#d0e8e3}
+.graph-concept{display:flex;align-items:flex-start;gap:17px}
+.graph-concept strong{display:block;color:#19373d;font:800 19px/1.2 Arial,sans-serif;margin-bottom:8px}
+.graph-concept p{font:15px/1.5 Arial,sans-serif;margin:0;color:#52666b}
+.concept-dot{display:block;width:24px;height:24px;flex:0 0 24px;margin-top:6px;border:4px solid #137f79;background:#bcf1e6;border-radius:50%}
+.concept-line{display:block;width:33px;flex:0 0 33px;height:3px;background:#0e7a78;margin-top:18px;position:relative}.concept-line:after,.concept-line:before{content:'';position:absolute;top:-5px;width:12px;height:12px;border-radius:50%;background:#0e7a78}.concept-line:before{left:0}.concept-line:after{right:0}
+.graph-lesson{border:1px solid #d6e7e3;border-radius:14px;overflow:hidden;background:#fff;margin:28px 0 47px;box-shadow:0 8px 24px #1739360b}
+.graph-lesson-head{display:flex;align-items:center;justify-content:space-between;gap:25px;background:#f2f8f6;padding:24px 29px 19px}
+.graph-lesson-head span,.example-no{font:800 11px/1.4 Arial,sans-serif;letter-spacing:.12em;color:#0c7d76}
+.graph-lesson-head h3{font:800 clamp(19px,2.5vw,26px)/1.2 Arial,sans-serif;color:#153b41;margin:10px 0 0}
+.graph-lesson-tag{font:700 13px/1.3 Arial,sans-serif;border:1px solid #b3d8d0;padding:9px 12px;white-space:nowrap;border-radius:24px;color:#3f6d67}
+.graph-lesson-controls{display:flex;gap:8px;flex-wrap:wrap;padding:19px 28px 0;font-family:Arial,sans-serif}
+.lesson-button{font:700 13px/1.2 Arial,sans-serif;cursor:pointer;background:#fff;border:1px solid #d1deda;color:#385b5d;border-radius:8px;padding:11px 16px}
+.lesson-button.active,.lesson-button:hover{background:#146f6c;color:white;border-color:#146f6c}
+.network-shell{padding:0 16px}.teaching-network{width:100%;height:auto;display:block;max-height:510px}
+.teaching-network .network-heading{font:800 14px Arial,sans-serif;letter-spacing:.13em;fill:#426966}
+.teaching-network .teaching-edge{stroke:#74a5a1;stroke-width:2.4;opacity:.6;transition:stroke-width .25s,stroke .25s,opacity .25s}
+.teaching-network .edges-b{stroke:#d5a480}
+.teaching-network .edges-bridge{stroke:#697785;stroke-width:3.2;opacity:.75}
+.teaching-network .teaching-node circle{stroke:white;stroke-width:3;fill:#087c79;filter:drop-shadow(0 2px 2px #193c3c20);transition:opacity .2s,fill .2s,r .2s}
+.teaching-network .group-b circle{fill:#ba7344}
+.teaching-network .teaching-node text{fill:white;font:800 15px Arial,sans-serif;pointer-events:none}
+.network-shell[data-lesson-view="communities"] .edges-bridge{opacity:.07}
+.network-shell[data-lesson-view="communities"] .edges-a,.network-shell[data-lesson-view="communities"] .edges-b{opacity:1;stroke-width:3.3}
+.network-shell[data-lesson-view="bridges"] .edges-a,.network-shell[data-lesson-view="bridges"] .edges-b{opacity:.11}
+.network-shell[data-lesson-view="bridges"] .edges-bridge{stroke:#bd482d;stroke-width:6;opacity:1}
+.network-shell[data-lesson-view="bridges"] .teaching-node:not(.group-a):not(.group-b){opacity:.2}
+.lesson-reading{background:#ebf5f2;border-left:4px solid #0e8a79;padding:17px 22px;margin:0 27px 0;font:16px/1.52 Arial,sans-serif;color:#34565a;border-radius:0 7px 7px 0}
+.lesson-reading b{color:#104c4c}.lesson-disclaimer{padding:13px 28px 18px;font:12px/1.5 Arial,sans-serif;color:#698084;margin:0}
+.network-examples{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:25px 0}
+.network-example{background:#fafcfb;border:1px solid #dce9e5;border-radius:12px;padding:21px 21px 19px;display:flex;flex-direction:column;min-width:0}
+.network-example h4{margin:8px 0 15px;color:#1b3c43;font:800 20px/1.2 Arial,sans-serif}
+.network-example p{font:14.5px/1.55 Arial,sans-serif;color:#3e575c;margin:0 0 12px}
+.network-example p strong{color:#174a4c}.example-relation{display:flex;align-items:center;justify-content:center;gap:5px;background:#edf5f3;border-radius:9px;padding:16px 6px;margin:auto 0 12px;min-height:97px;white-space:nowrap}
+.relation-node{background:white;color:#14544e;border:2px solid #39978a;padding:8px 9px;border-radius:7px;font:700 12px Arial,sans-serif}
+.relation-link{font:700 11px Arial,sans-serif;color:#206c68;text-align:center;position:relative;min-width:72px}
+.relation-link:after{content:'';display:block;background:#58a49c;height:3px;margin:5px 0 0}
+.relation-link.directed:after{background:linear-gradient(90deg,#58a49c,#14746b);clip-path:polygon(0 35%,85% 35%,85% 0,100% 50%,85% 100%,85% 65%,0 65%);height:12px;margin:2px 0 -4px}
+.network-example small{font:12px/1.45 Arial,sans-serif;color:#708185}
+@media(max-width:940px){.graph-basics{grid-template-columns:1fr 1fr}.graph-math{grid-column:1/-1}.network-examples{grid-template-columns:1fr 1fr}.graph-lesson-head{align-items:flex-start}}
+@media(max-width:680px){.graph-basics,.network-examples{grid-template-columns:1fr}.graph-lesson-head{display:block}.graph-lesson-tag{display:inline-block;margin-top:12px}.graph-lesson-controls{padding:16px 16px 0}.lesson-button{flex:1 1 auto}.network-shell{padding:0 4px}.lesson-reading{margin:0 14px}.graph-lesson-head{padding:19px 17px}.network-example h4{margin:7px 0 10px}.network-example .example-relation{max-width:380px;width:100%;margin:8px auto 12px}.lesson-disclaimer{padding:13px 15px}}
+@media print{.graph-lesson-controls{display:none}.graph-lesson{break-inside:avoid}.network-examples{grid-template-columns:repeat(3,1fr)}.teaching-network{max-height:310px}.network-example{padding:12px}.relation-node{padding:6px}}
+
+/* Glosario introductorio del capítulo Wikidata */
+.wikidata-basics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:25px 0}
+.wiki-definition{background:#f7faf9;border:1px solid #d8e7e2;border-radius:10px;padding:19px 19px 14px}
+.wiki-label{color:#087c79;font:800 11px/1.5 Arial,sans-serif;letter-spacing:.11em}
+.wiki-definition h3{font:800 22px/1.2 Arial,sans-serif;color:#173b41;margin:7px 0 12px}
+.wiki-definition p{font:15px/1.55 Arial,sans-serif;color:#405a5d;margin-bottom:8px}
+.wiki-definition code,.sparql-explain code{font-family:Consolas,monospace}
+.sparql-explain{margin:8px 0 33px;padding:21px 24px 18px;border:1px solid #cfe5de;border-left:4px solid #098078;border-radius:8px;background:#f2f8f6;display:grid;grid-template-columns:1.15fr 1fr;column-gap:26px}
+.sparql-explain strong{font:800 16px Arial,sans-serif;color:#174d4c}
+.sparql-explain p{font:15px/1.52 Arial,sans-serif;margin:8px 0 0}
+.sparql-explain pre{background:#183c41;color:#f1fbf8;padding:16px;overflow-x:auto;border-radius:8px;font:13px/1.65 Consolas,monospace;margin:0;white-space:pre-wrap}
+.sparql-note{grid-column:1/-1;color:#4b666a}
+@media(max-width:820px){.wikidata-basics{grid-template-columns:1fr}.sparql-explain{grid-template-columns:1fr;gap:16px}}
+@media print{.wikidata-basics,.sparql-explain{break-inside:avoid}}
 </style>
 </head>
 <body>
@@ -87,21 +150,44 @@ body.proyeccion .page{max-width:1390px;padding:clamp(24px,4vw,90px)}body.proyecc
 <div class="paper-card"><h3>Experiencia de campo</h3><p>El manuscrito del grafo situado se fundamenta en observación participante de la peregrinación de <strong>2025</strong>, incluida la participación del primer autor en la comparsa de ukukus de la Nación Paucartambo. El registro fotográfico y cartográfico de <strong>2026</strong> amplía la documentación territorial, pero no es la fuente temporal del grafo descrito en ese manuscrito.</p></div></div>
 <figure><img src="assets/ubicacion-peru.webp" alt="Ubicación geográfica de Perú en Sudamérica y sector del Cusco" loading="lazy"><figcaption>Localización inicial para situar la investigación. Mapa elaborado a partir de los materiales cartográficos aportados para la conferencia.</figcaption></figure>
 <p>La exposición examina <strong>tres infraestructuras diferentes de representación</strong>: una clasificación institucional (UNESCO), una base de conocimiento colaborativa (Wikidata) y un grafo construido a partir de documentación de campo. No son intercambiables y no responden exactamente a la misma pregunta científica.</p>
-</section><section class="chap" id="grafos"><div class="eyebrow">02 / Herramientas de lectura</div><h2>Los grafos: estudiar relaciones, no solo contar elementos</h2>
-<p class="lead">Una red es útil cuando queremos comprender cómo se conectan los elementos de un registro. La pregunta cambia según <em>qué</em> se considera un nodo y <em>qué</em> significa una arista.</p>
-<div class="graph-compare" aria-label="Comparación de dos visualizaciones científicas de redes">
-  <figure class="graph-panel">
-    <div class="graph-heading"><div><div class="graph-index">01 · UNESCO · ARTÍCULO PUBLICADO</div><h3>Red de coocurrencia de descriptores</h3><p>Las conexiones aparecen porque dos etiquetas se asignan a los mismos elementos del inventario.</p></div><div class="graph-fact"><b>220</b><span>nodos · red primaria</span><b>1.026</b><span>conexiones ponderadas</span></div></div>
-    <div class="graph-stage"><img src="assets/original_UNESCO_03.jpg" alt="Red empírica de 220 descriptores primarios del artículo UNESCO, con múltiples comunidades cromáticas, nodos y conexiones ponderadas" loading="lazy"></div>
-    <figcaption><strong>Red real, no esquema ilustrativo.</strong> Figura de la investigación publicada en <em>npj Heritage Science</em> (2026). Cada nodo corresponde a un descriptor y los colores representan comunidades detectadas en la red. <span class="zoom-hint">Haz clic en la figura para ampliarla.</span></figcaption>
-  </figure>
-  <figure class="graph-panel">
-    <div class="graph-heading"><div><div class="graph-index">02 · QOYLLUR RIT’I · MANUSCRITO DE CAMPO</div><h3>Grafo de conocimiento situado</h3><p>Las entidades no son palabras clave: representan eventos, lugares, actores y relaciones documentadas.</p></div><div class="graph-fact"><b>87</b><span>individuos modelados</span><b>15</b><span>clases ontológicas</span></div></div>
-    <div class="graph-stage"><img src="assets/grafo-2025-articulo.webp" alt="Visualización real del grafo de conocimiento del manuscrito de Qoyllur Rit’i, con lugares, eventos y entidades dobles resaltadas por tipo" loading="lazy"></div>
-    <figcaption><strong>Figura del manuscrito de conocimiento situado (2026).</strong> La visualización muestra relaciones seleccionadas entre entidades, no la totalidad de las afirmaciones RDF/OWL. Su disposición es relacional, no geográfica. <span class="zoom-hint">Haz clic para ampliarla.</span></figcaption>
-  </figure>
+</section><section class="chap" id="grafos"><div class="eyebrow">02 / Herramientas de lectura</div>
+<h2>¿Qué es un grafo?</h2>
+<p class="lead">Un grafo es una forma de representar <strong>elementos y sus relaciones</strong>. Los elementos son <strong>nodos</strong> (o vértices), y las relaciones son <strong>aristas</strong> (o enlaces). Sirve para observar no solo <em>qué</em> aparece en los datos, sino también <em>cómo se conecta</em>.</p>
+<div class="graph-basics" aria-label="Conceptos esenciales de un grafo">
+ <div class="graph-math"><span>G = (V, E)</span><small>Un grafo tiene un conjunto de nodos V y un conjunto de aristas E.</small></div>
+ <div class="graph-concept"><span class="concept-dot" aria-hidden="true"></span><div><strong>Nodo (V)</strong><p>Un elemento: una persona, un lugar, un descriptor o un acontecimiento.</p></div></div>
+ <div class="graph-concept"><span class="concept-line" aria-hidden="true"></span><div><strong>Arista (E)</strong><p>Una relación entre dos nodos, cuya definición depende de los datos.</p></div></div>
 </div>
-<div class="key"><strong>La diferencia no es solo visual</strong><p>El artículo UNESCO construye enlaces <em>no dirigidos y ponderados</em> entre descriptores que coocurren en los registros. El grafo situado utiliza entidades y relaciones tipadas en RDF/OWL para documentar lugares, acontecimientos, actores y secuencias. Son dos modelos con unidades de análisis y criterios de construcción diferentes; no deben interpretarse como si fueran la misma red.</p></div>
+<div class="graph-lesson" aria-label="Ejercicio visual para aprender a interpretar redes">
+ <div class="graph-lesson-head"><div><span>UN EJEMPLO PARA APRENDER A LEER REDES</span><h3>De los elementos aislados a la estructura de relaciones</h3></div><div class="graph-lesson-tag">16 nodos · 36 aristas</div></div>
+ <div class="graph-lesson-controls" role="group" aria-label="Qué observar en el grafo">
+  <button class="lesson-button active" type="button" data-lesson="connections" aria-pressed="true">1. Nodos y aristas</button>
+  <button class="lesson-button" type="button" data-lesson="communities" aria-pressed="false">2. Grupos conectados</button>
+  <button class="lesson-button" type="button" data-lesson="bridges" aria-pressed="false">3. Conexiones entre grupos</button>
+ </div>
+ <div class="network-shell" data-lesson-view="connections">
+ <svg class="teaching-network" viewBox="0 0 1010 465" role="img" aria-labelledby="net-title net-desc" xmlns="http://www.w3.org/2000/svg">
+<title id="net-title">Red ilustrativa con dieciséis nodos organizados en dos grupos y dos conexiones entre grupos</title>
+<desc id="net-desc">Ocho nodos A y ocho nodos B unidos por aristas. Los grupos tienen enlaces internos y dos aristas unen ambos grupos. Es un ejemplo inventado para aprender a leer redes, no resultados de los artículos.</desc>
+<rect x="6" y="8" width="998" height="441" rx="18" fill="#f8fbfa"/>
+<rect x="72" y="40" width="386" height="405" rx="35" fill="#e9f4f1"/>
+<rect x="550" y="40" width="386" height="405" rx="35" fill="#fff2ea"/>
+<text class="network-heading" x="105" y="78">GRUPO A</text><text class="network-heading" x="587" y="78">GRUPO B</text>
+<g class="network-edges"><line class="teaching-edge edges-a" x1="260.0" y1="103.0" x2="362.5" y2="144.6"/><line class="teaching-edge edges-a" x1="362.5" y1="144.6" x2="405.0" y2="245.0"/><line class="teaching-edge edges-a" x1="405.0" y1="245.0" x2="362.5" y2="345.4"/><line class="teaching-edge edges-a" x1="362.5" y1="345.4" x2="260.0" y2="387.0"/><line class="teaching-edge edges-a" x1="260.0" y1="387.0" x2="157.5" y2="345.4"/><line class="teaching-edge edges-a" x1="157.5" y1="345.4" x2="115.0" y2="245.0"/><line class="teaching-edge edges-a" x1="115.0" y1="245.0" x2="157.5" y2="144.6"/><line class="teaching-edge edges-a" x1="157.5" y1="144.6" x2="260.0" y2="103.0"/><line class="teaching-edge edges-a" x1="260.0" y1="103.0" x2="405.0" y2="245.0"/><line class="teaching-edge edges-a" x1="260.0" y1="103.0" x2="115.0" y2="245.0"/><line class="teaching-edge edges-a" x1="362.5" y1="144.6" x2="362.5" y2="345.4"/><line class="teaching-edge edges-a" x1="362.5" y1="144.6" x2="157.5" y2="144.6"/><line class="teaching-edge edges-a" x1="405.0" y1="245.0" x2="260.0" y2="387.0"/><line class="teaching-edge edges-a" x1="362.5" y1="345.4" x2="157.5" y2="345.4"/><line class="teaching-edge edges-a" x1="260.0" y1="387.0" x2="115.0" y2="245.0"/><line class="teaching-edge edges-a" x1="157.5" y1="345.4" x2="157.5" y2="144.6"/><line class="teaching-edge edges-a" x1="405.0" y1="245.0" x2="115.0" y2="245.0"/><line class="teaching-edge edges-b" x1="750.0" y1="103.0" x2="852.5" y2="144.6"/><line class="teaching-edge edges-b" x1="852.5" y1="144.6" x2="895.0" y2="245.0"/><line class="teaching-edge edges-b" x1="895.0" y1="245.0" x2="852.5" y2="345.4"/><line class="teaching-edge edges-b" x1="852.5" y1="345.4" x2="750.0" y2="387.0"/><line class="teaching-edge edges-b" x1="750.0" y1="387.0" x2="647.5" y2="345.4"/><line class="teaching-edge edges-b" x1="647.5" y1="345.4" x2="605.0" y2="245.0"/><line class="teaching-edge edges-b" x1="605.0" y1="245.0" x2="647.5" y2="144.6"/><line class="teaching-edge edges-b" x1="647.5" y1="144.6" x2="750.0" y2="103.0"/><line class="teaching-edge edges-b" x1="750.0" y1="103.0" x2="895.0" y2="245.0"/><line class="teaching-edge edges-b" x1="750.0" y1="103.0" x2="605.0" y2="245.0"/><line class="teaching-edge edges-b" x1="852.5" y1="144.6" x2="852.5" y2="345.4"/><line class="teaching-edge edges-b" x1="852.5" y1="144.6" x2="647.5" y2="144.6"/><line class="teaching-edge edges-b" x1="895.0" y1="245.0" x2="750.0" y2="387.0"/><line class="teaching-edge edges-b" x1="852.5" y1="345.4" x2="647.5" y2="345.4"/><line class="teaching-edge edges-b" x1="750.0" y1="387.0" x2="605.0" y2="245.0"/><line class="teaching-edge edges-b" x1="647.5" y1="345.4" x2="647.5" y2="144.6"/><line class="teaching-edge edges-b" x1="895.0" y1="245.0" x2="605.0" y2="245.0"/><line class="teaching-edge edges-bridge" x1="405.0" y1="245.0" x2="605.0" y2="245.0"/><line class="teaching-edge edges-bridge" x1="362.5" y1="345.4" x2="647.5" y2="345.4"/></g>
+<g class="network-nodes"><g class="teaching-node group-a" aria-label="Nodo A1"><circle cx="260.0" cy="103.0" r="24"/><text x="260.0" y="108.0" text-anchor="middle">A1</text></g><g class="teaching-node group-a" aria-label="Nodo A2"><circle cx="362.5" cy="144.6" r="24"/><text x="362.5" y="149.6" text-anchor="middle">A2</text></g><g class="teaching-node group-a" aria-label="Nodo A3"><circle cx="405.0" cy="245.0" r="24"/><text x="405.0" y="250.0" text-anchor="middle">A3</text></g><g class="teaching-node group-a" aria-label="Nodo A4"><circle cx="362.5" cy="345.4" r="24"/><text x="362.5" y="350.4" text-anchor="middle">A4</text></g><g class="teaching-node group-a" aria-label="Nodo A5"><circle cx="260.0" cy="387.0" r="24"/><text x="260.0" y="392.0" text-anchor="middle">A5</text></g><g class="teaching-node group-a" aria-label="Nodo A6"><circle cx="157.5" cy="345.4" r="24"/><text x="157.5" y="350.4" text-anchor="middle">A6</text></g><g class="teaching-node group-a" aria-label="Nodo A7"><circle cx="115.0" cy="245.0" r="24"/><text x="115.0" y="250.0" text-anchor="middle">A7</text></g><g class="teaching-node group-a" aria-label="Nodo A8"><circle cx="157.5" cy="144.6" r="24"/><text x="157.5" y="149.6" text-anchor="middle">A8</text></g><g class="teaching-node group-b" aria-label="Nodo B1"><circle cx="750.0" cy="103.0" r="24"/><text x="750.0" y="108.0" text-anchor="middle">B1</text></g><g class="teaching-node group-b" aria-label="Nodo B2"><circle cx="852.5" cy="144.6" r="24"/><text x="852.5" y="149.6" text-anchor="middle">B2</text></g><g class="teaching-node group-b" aria-label="Nodo B3"><circle cx="895.0" cy="245.0" r="24"/><text x="895.0" y="250.0" text-anchor="middle">B3</text></g><g class="teaching-node group-b" aria-label="Nodo B4"><circle cx="852.5" cy="345.4" r="24"/><text x="852.5" y="350.4" text-anchor="middle">B4</text></g><g class="teaching-node group-b" aria-label="Nodo B5"><circle cx="750.0" cy="387.0" r="24"/><text x="750.0" y="392.0" text-anchor="middle">B5</text></g><g class="teaching-node group-b" aria-label="Nodo B6"><circle cx="647.5" cy="345.4" r="24"/><text x="647.5" y="350.4" text-anchor="middle">B6</text></g><g class="teaching-node group-b" aria-label="Nodo B7"><circle cx="605.0" cy="245.0" r="24"/><text x="605.0" y="250.0" text-anchor="middle">B7</text></g><g class="teaching-node group-b" aria-label="Nodo B8"><circle cx="647.5" cy="144.6" r="24"/><text x="647.5" y="149.6" text-anchor="middle">B8</text></g></g>
+</svg>
+ </div>
+ <div class="lesson-reading" id="graph-lesson-reading" aria-live="polite"><b>Empieza por lo básico.</b> Cada círculo es un nodo; cada línea representa una arista. Dos nodos conectados tienen una relación definida por quien construyó el grafo.</div>
+ <p class="lesson-disclaimer">Red dibujada con fines pedagógicos; no corresponde a los datos de UNESCO, Wikidata ni al grafo de campo.</p>
+</div>
+<h3>Los nodos y las aristas cambian según el estudio</h3>
+<p>En las investigaciones sobre Qoyllur Rit’i usamos la misma idea matemática, pero <strong>no construimos el mismo tipo de grafo</strong>. Por ejemplo:</p>
+<div class="network-examples">
+ <article class="network-example"><div class="example-no">01 / UNESCO</div><h4>Descriptores de patrimonio</h4><p><strong>Nodos:</strong> palabras clave usadas para clasificar elementos inscritos.</p><p><strong>Arista:</strong> dos descriptores aparecen asociados al mismo registro; la conexión puede tener un <strong>peso</strong> según su frecuencia.</p><div class="example-relation"><span class="relation-node">Danza</span><span class="relation-link">coocurren</span><span class="relation-node">Máscaras</span></div><small>Corresponden a <em>Dance</em> y <em>Masks</em> en el registro UNESCO; la arista gana peso si ambos aparecen juntos en más fichas.</small></article>
+ <article class="network-example"><div class="example-no">02 / WIKIDATA</div><h4>Entidades de una base colaborativa</h4><p><strong>Nodos:</strong> entidades registradas en Wikidata, como festividades, lugares e instituciones.</p><p><strong>Arista:</strong> una propiedad explícita conecta una entidad con otra y determina qué significa el vínculo.</p><div class="example-relation"><span class="relation-node">Q2408955</span><span class="relation-link directed">P131 →</span><span class="relation-node">?lugar</span></div><small>Patrón de consulta del artículo; la relación solo se incorpora si aparece en los datos recuperados.</small></article>
+ <article class="network-example"><div class="example-no">03 / GRAFO SITUADO</div><h4>Relaciones documentadas en campo</h4><p><strong>Nodos:</strong> lugares, eventos, actores y otras entidades de la ontología construida para Qoyllur Rit’i.</p><p><strong>Arista:</strong> una relación definida en el vocabulario del proyecto vincula esas entidades.</p><div class="example-relation"><span class="relation-node">Lomada</span><span class="relation-link directed">rdf:type →</span><span class="relation-node">Evento / Lugar</span></div><small>La Lomada tiene doble pertenencia de clase en la ontología del manuscrito.</small></article>
+</div>
+<div class="key"><strong>¿Por qué importa?</strong><p>Que dos nodos estén conectados en una red de etiquetas no significa lo mismo que una propiedad registrada en Wikidata o una relación documentada durante una investigación de campo. <strong>Para interpretar un grafo, primero hay que saber qué representan sus nodos y cómo se construyeron sus aristas.</strong> En los capítulos siguientes veremos las figuras reales de cada artículo.</p></div>
 <div class="research-tools" id="exploradores" aria-label="Herramientas interactivas del proyecto">
   <div class="research-tool"><div class="tool-mark">01 / VISUALIZACIÓN</div><h3>Explorar el grafo de Qoyllur Rit’i</h3><p>Abre la red original para buscar entidades, explorar conexiones y filtrar por tipo de nodo.</p><a href="https://javier-vz.github.io/kg-llm/grafo_interactivo.html" target="_blank" rel="noopener noreferrer">Abrir grafo interactivo <span aria-hidden="true">↗</span></a></div>
   <div class="research-tool"><div class="tool-mark">02 / CONSULTA CON IA</div><h3>Qoyllur Rit’i Explorer</h3><p>Demostración de preguntas y respuestas asistidas por recuperación de información. Es un sistema experimental, no una fuente autónoma.</p><a href="https://qoyllurity.streamlit.app/" target="_blank" rel="noopener noreferrer">Abrir la aplicación RAG <span aria-hidden="true">↗</span></a></div>
@@ -236,11 +322,19 @@ body.proyeccion .page{max-width:1390px;padding:clamp(24px,4vw,90px)}body.proyecc
 <p>Una tabla de frecuencias puede decir cuántas veces aparece <em>Dance</em> o <em>Religious syncretism</em>. Una red añade otra pregunta: <strong>¿con qué aparecen?</strong> Esa diferencia es el corazón metodológico del trabajo. Al estudiar relaciones y no únicamente frecuencias, se vuelve posible encontrar constelaciones de términos, comparar la posición de países dentro de ellas y observar puentes entre distintos niveles de la taxonomía.</p>
 <p>La detección de comunidades y la entropía tampoco sustituyen la interpretación. Funcionan como herramientas de escala. Louvain organiza una red compleja en agrupaciones que luego deben ser leídas; la entropía convierte la dispersión entre esas agrupaciones en una magnitud comparable. La lectura patrimonial sigue siendo necesaria para decidir qué significa una concentración y por qué una pareja como <em>Procession ↔ Religious syncretism</em> resulta significativa.</p>
 <p>Ese equilibrio entre método computacional y lectura crítica es quizá uno de los aportes más útiles para estudiantes: la técnica no “descubre” automáticamente el sesgo. Hace visible una estructura que después debe discutirse a la luz de cómo funcionan las instituciones, los vocabularios y los procesos de inscripción.</p><div class="limits"><strong>Nota de procedencia:</strong> este capítulo recupera directamente las explicaciones, tablas, imágenes y pies del apunte HTML original; las cifras y el método se contrastaron con el artículo publicado. Las figuras se mantienen con su atribución.</div></section><section class="chap" id="wikidata"><div class="eyebrow">04 / Artículo publicado · Humanities &amp; Social Sciences Communications (2026)</div><h2>Wikidata: qué vínculos quedaron registrados y cuáles no</h2>
-<p class="lead">El segundo artículo compara la representación digital de <strong>Qoyllur Rit’i</strong> y de la <strong>Festividad de la Virgen del Carmen de Paucartambo</strong> en Wikidata. A diferencia de UNESCO, aquí los nodos son entidades y las relaciones provienen de propiedades semánticas consultadas mediante SPARQL.</p>
+<p class="lead">El segundo artículo estudia cómo aparecen representados <strong>Qoyllur Rit’i</strong> y la <strong>Festividad de la Virgen del Carmen de Paucartambo</strong> en Wikidata. Para interpretar sus resultados conviene distinguir primero tres herramientas: Wikipedia, Wikidata y SPARQL.</p>
+<div class="wikidata-basics" aria-label="Diferencia entre Wikipedia, Wikidata y SPARQL">
+  <article class="wiki-definition"><div class="wiki-label">ENCICLOPEDIA</div><h3>Wikipedia</h3><p>Publica <strong>artículos narrativos</strong>, escritos y revisados por colaboradores. Permite <em>leer</em> sobre una festividad: su historia, organización o contexto.</p></article>
+  <article class="wiki-definition"><div class="wiki-label">BASE DE CONOCIMIENTO</div><h3>Wikidata</h3><p>Organiza <strong>datos estructurados</strong> y los conecta mediante propiedades. Cada entidad tiene un identificador estable: por ejemplo, <code>Q2408955</code> representa Qoyllur Rit’i.</p></article>
+  <article class="wiki-definition"><div class="wiki-label">LENGUAJE DE CONSULTA</div><h3>SPARQL</h3><p>Sirve para <strong>hacer preguntas a datos relacionados</strong>: por ejemplo, buscar qué lugares o entidades están vinculados con una festividad mediante una propiedad.</p></article>
+</div>
+<div class="sparql-explain"><div><strong>Un ejemplo del método del artículo</strong><p>En Wikidata, <code>P131</code> identifica una propiedad territorial administrativa. El artículo consulta los vínculos de <code>Q2408955</code> (Qoyllur Rit’i) con entidades geográficas.</p></div><pre aria-label="Patrón de consulta SPARQL"><code>SELECT ?lugar WHERE {
+  wd:Q2408955 wdt:P131 ?lugar .
+}</code></pre><p class="sparql-note">La consulta significa: «busca las entidades territoriales administrativas enlazadas con Qoyllur Rit’i mediante P131». La consulta no presupone qué resultados existen; el estudio analiza después las relaciones recuperadas.</p></div>
 <div class="citation"><strong>Fuente primaria:</strong> Vera Zúñiga, J. &amp; Cornejo Meza, D. (2026). “Festivities at the edge of data: an interdisciplinary study of Andean festivals in Wikidata”. <em>Humanities &amp; Social Sciences Communications</em>. <a href="https://doi.org/10.1057/s41599-026-08715-6">DOI: 10.1057/s41599-026-08715-6</a>.</div>
 <div class="stats"><div class="stat"><b>228</b><span>entidades en la muestra</span></div><div class="stat"><b>495</b><span>registros de aristas dirigidas</span></div><div class="stat"><b>13</b><span>comunidades identificadas</span></div><div class="stat"><b>225</b><span>nodos del componente mayor</span></div></div>
-<h3>Del registro de Wikidata a la red analizada</h3><p>La extracción SPARQL, realizada entre marzo y junio de 2025, parte de los identificadores <code>Q2408955</code> (Qoyllur Rit’i) y <code>Q60643381</code> (Virgen del Carmen de Paucartambo). Se seleccionan propiedades de clasificación, pertenencia, localización y jerarquía como <code>P31</code>, <code>P527</code>, <code>P131</code> y <code>P279</code>. El análisis se efectúa sobre <strong>esa muestra y esos predicados</strong>; no sobre todo Wikidata.</p>
-<figure><img src="assets/wikidata-red-articulo.webp" loading="lazy" alt="Visualización publicada del componente conectado principal de Wikidata, con nodos rituales e institucionales"><figcaption>Visualización del mayor componente conectado en el artículo de Wikidata. Los nodos administrativos y de clasificación aparecen conectados con mayor densidad que los festivos. Fuente: Vera Zúñiga y Cornejo Meza (2026), figura 3; reproducción didáctica.</figcaption></figure>
+<h3>De las consultas SPARQL a la red analizada</h3><p>Entre marzo y junio de 2025, el equipo consultó Wikidata a partir de <code>Q2408955</code> (Qoyllur Rit’i) y <code>Q60643381</code> (Virgen del Carmen de Paucartambo). Seleccionó propiedades como <code>P31</code> (instancia de), <code>P527</code> (tiene como parte), <code>P131</code> (entidad territorial administrativa) y <code>P279</code> (subclase de). Cada relación recuperada puede representarse como <strong>entidad → propiedad → entidad</strong>. El análisis corresponde a <strong>esa extracción, no a toda Wikidata</strong>.</p>
+<figure><a href="assets/grafo-unificado-proporcionado.png" target="_blank" rel="noopener noreferrer" aria-label="Abrir figura de la red Wikidata a mayor tamaño"><img src="assets/grafo-unificado-proporcionado.png" loading="lazy" alt="Red de entidades de Wikidata proporcionada para la conferencia; Qoyllur Rit’i aparece junto a numerosas entidades territoriales y la Virgen del Carmen en un sector periférico"></a><figcaption>Red de Wikidata, visualización proporcionada por el equipo para esta conferencia. El gráfico muestra <strong>225 nodos, 491 aristas y 41 etiquetas visibles</strong>; la muestra total reportada en el artículo comprende <strong>228 entidades y 495 registros de aristas</strong>. La diferencia corresponde al subconjunto visualizado. Haz clic sobre la figura para ampliarla.</figcaption></figure>
 <h3>Un resultado concreto: k-core no es importancia cultural</h3>
 <div class="figure-row"><div class="paper-card"><h3>Qoyllur Rit’i</h3><p>Se encuentra en la <strong>capa 3</strong> de la descomposición k-core del grafo muestreado. Está integrado en relaciones digitales, pero no forma parte del núcleo institucional más denso (capa 4).</p><p class="context">Nodo en Wikidata: Q2408955.</p></div><div class="paper-card"><h3>Virgen del Carmen de Paucartambo</h3><p>Se sitúa en la <strong>capa 1</strong>, aun siendo central en la vida ritual de Paucartambo. Los datos digitales del muestreo no reflejan automáticamente esa centralidad vivida.</p><p class="context">Nodo en Wikidata: Q60643381.</p></div></div>
 <p>Las cuatro capas tienen, respectivamente, <strong>57, 33, 102 y 33 nodos</strong> en el componente mayor analizado. Que no exista una arista directa entre ambos festivales en esta red seleccionada <strong>no demuestra que no exista relación cultural</strong>. Indica una ausencia en el conjunto de relaciones recuperadas bajo los criterios metodológicos del estudio.</p>
@@ -304,5 +398,24 @@ body.proyeccion .page{max-width:1390px;padding:clamp(24px,4vw,90px)}body.proyecc
 function scrollSync(){let h=document.documentElement;progress.style.width=(100*window.scrollY/Math.max(1,h.scrollHeight-innerHeight))+'%';let current='';for(let id of ids){let el=document.querySelector(id);if(el&&el.getBoundingClientRect().top<180)current=id;}links.forEach(a=>a.classList.toggle('current',a.getAttribute('href')===current));}addEventListener('scroll',scrollSync,{passive:true});scrollSync();
 toggle.addEventListener('click',()=>{document.body.classList.toggle('proyeccion');toggle.textContent=document.body.classList.contains('proyeccion')?'Volver a lectura':'Ampliar para exposición';});
 const d=document.getElementById('zoom'),photo=document.getElementById('zoom-photo');document.querySelectorAll('figure img').forEach(img=>{img.setAttribute('tabindex','0');img.setAttribute('title','Ampliar imagen');function open(){photo.src=img.src;photo.alt=img.alt;d.showModal();}img.addEventListener('click',open);img.addEventListener('keydown',e=>{if(e.key==='Enter')open()});});document.getElementById('close-zoom').onclick=()=>d.close();d.addEventListener('click',e=>{if(e.target===d)d.close()});
+})();
+
+// Demostración didáctica en el capítulo de grafos; no modifica los datos de los artículos.
+(()=>{
+  const buttons=document.querySelectorAll('.lesson-button');
+  const shell=document.querySelector('.network-shell');
+  const reading=document.getElementById('graph-lesson-reading');
+  const explanations={
+    connections:'<b>Empieza por lo básico.</b> Cada círculo es un nodo; cada línea representa una arista. Dos nodos conectados tienen una relación definida por quien construyó el grafo.',
+    communities:'<b>Observa los grupos.</b> Dentro de cada grupo hay numerosas conexiones. En redes reales, los algoritmos de detección de comunidades buscan particiones con un patrón de enlaces internos relativamente denso.',
+    bridges:'<b>Observa las conexiones entre grupos.</b> Dos aristas unen estas partes de la red. Aunque son pocas, permiten recorrerla de un lado a otro. Un puente en sentido matemático estricto es una arista cuya eliminación aumenta el número de componentes.'
+  };
+  buttons.forEach(button=>button.addEventListener('click',()=>{
+    const key=button.dataset.lesson;
+    if(!explanations[key])return;
+    buttons.forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',String(b===button))});
+    shell.dataset.lessonView=key;
+    reading.innerHTML=explanations[key];
+  }));
 })();
 </script></body></html>
