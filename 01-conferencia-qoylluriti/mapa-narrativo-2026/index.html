@@ -13,9 +13,10 @@
 *{box-sizing:border-box}html,body{margin:0;height:100%;font-family:'DM Sans',sans-serif;color:var(--pine);background:var(--sand)}button,a{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 .header{height:66px;display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--pine);color:#fff;padding:0 22px;position:relative;z-index:800}.brand{font:700 18px 'Libre Baskerville',serif;letter-spacing:-.5px}.brand small{font:500 10px 'DM Sans',sans-serif;letter-spacing:2px;text-transform:uppercase;color:#a3b7ac;display:block;margin-bottom:4px}.headerlinks{display:flex;align-items:center;gap:13px}.headerlinks a{color:#d4ddd7;text-decoration:none;font-size:12px}.headerlinks a:hover{text-decoration:underline}.status{font-size:10px;letter-spacing:.7px;border:1px solid #87a398;border-radius:50px;padding:7px 11px;color:#c9d7cf;text-transform:uppercase}
 .shell{display:grid;grid-template-columns:minmax(350px,420px) minmax(0,1fr);height:calc(100vh - 66px);min-height:570px}.narrative{overflow:auto;scroll-behavior:smooth;position:relative;background:var(--sand);scrollbar-color:#b8b6af transparent}.hero{height:250px;position:relative;background:#253f3e}.hero img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.84)}.hero:after{position:absolute;content:'';inset:0;background:linear-gradient(to top,rgba(9,30,28,.82),transparent 78%)}.hero-copy{position:absolute;left:24px;bottom:21px;right:22px;z-index:2;color:#fff}.hero-copy .overline{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:#e3c59b}.hero-copy h1{font:700 25px/1.25 'Libre Baskerville',serif;margin:8px 0 0}.intro{padding:22px 25px 17px}.intro p{font-size:13px;line-height:1.75;margin:0 0 13px;color:#42524d}.author{font-size:11px;letter-spacing:.1px;color:#5c716a;border-left:3px solid var(--gold);padding-left:10px;line-height:1.55;margin-top:16px}.toolbar{display:flex;gap:8px;align-items:center;padding:0 25px 12px;flex-wrap:wrap}.chip{padding:8px 11px;font-size:11px;font-weight:700;letter-spacing:.2px;border:1px solid #d8d4cb;border-radius:35px;background:transparent;color:#53605b;transition:.15s}.chip[aria-pressed="true"]{background:var(--pine);border-color:var(--pine);color:#fff}.chapter-heading{padding:15px 25px 10px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase}.chapter-heading span{color:var(--muted);font-size:10px}.story-list{padding:0 13px 28px}.story-card{margin:8px 0;padding:0;background:var(--paper);border:1px solid #e9e4db;border-radius:var(--radius);box-shadow:0 3px 10px rgba(19,36,32,.025);overflow:hidden;transition:border-color .2s,box-shadow .2s}.story-card.active{border-color:var(--red);box-shadow:0 7px 25px rgba(65,42,28,.10)}.story-toggle{border:0;background:transparent;color:inherit;padding:13px 14px;display:flex;text-align:left;gap:10px;width:100%;align-items:center}.num{width:26px;height:26px;flex-shrink:0;display:grid;place-items:center;color:var(--red);font-weight:700;font-size:10px;border:1px solid #ddc5b9;border-radius:50%}.story-card.active .num{background:var(--red);color:white;border-color:var(--red)}.story-title{font:700 14px 'Libre Baskerville',serif}.story-sub{font-size:11px;color:#7b857e;margin-top:4px}.arrow{margin-left:auto;font-size:15px;color:#a1aaa3;transition:transform .2s}.story-card.active .arrow{transform:rotate(90deg)}.story-detail{display:none;padding:0 15px 17px}.story-card.active .story-detail{display:block}.story-detail p{font-size:12px;color:#394d47;line-height:1.7;margin:5px 0 12px}.story-detail p.question{font-style:italic;border-left:2px solid var(--gold);padding-left:10px;color:#334945}.photo-gallery{display:flex;gap:8px;overflow-x:auto;padding:2px 0 10px;scrollbar-width:thin}.photo-button{border:0;padding:0;background:none;flex:0 0 154px;position:relative;border-radius:6px;overflow:hidden}.photo-button img{width:154px;height:104px;object-fit:cover;display:block;transition:transform .2s}.photo-button:hover img{transform:scale(1.06)}.photo-button small{position:absolute;right:6px;bottom:6px;background:#153c3bba;color:#fff;font-size:9px;border-radius:3px;padding:4px}.source{font-size:10px!important;color:#7d857c!important;line-height:1.5!important;margin:1px 0 6px!important}.notice{font-size:10px!important;color:#8e5b46!important}.subtlelink{font-size:11px;font-weight:700;color:var(--red);text-decoration:none}.ending{padding:22px 25px 40px;border-top:1px solid var(--line);font-size:12px;line-height:1.7;color:#4c5c55}.ending h3{font:700 18px 'Libre Baskerville',serif;margin:5px 0 10px}.ending a{color:var(--red)}
-.maparea{position:relative;min-height:470px}#map{width:100%;height:100%;background:#e8e6df}.leaflet-control-attribution{font-size:9px!important}.map-brand{position:absolute;z-index:600;left:22px;top:20px;max-width:calc(100% - 44px);pointer-events:none}.map-brand h2{font:700 24px 'Libre Baskerville',serif;margin:0 0 6px;background:rgba(255,253,249,.94);display:table;padding:12px 15px 5px;border-radius:7px 7px 0 0}.map-brand p{font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:#62766b;background:rgba(255,253,249,.94);margin:0;display:table;padding:0 15px 13px;border-radius:0 0 7px 7px}.maptools{z-index:620;position:absolute;right:20px;top:22px;display:flex;flex-direction:column;gap:8px}.maptools button{font-size:12px;color:var(--pine);background:rgba(255,253,249,.97);border:1px solid #ddd8d0;padding:11px 14px;border-radius:8px;box-shadow:0 4px 18px rgba(39,57,48,.10);font-weight:700}.map-legend{position:absolute;bottom:27px;left:22px;z-index:600;background:rgba(255,253,249,.96);border:1px solid #e2ddd3;padding:14px 16px;border-radius:8px;box-shadow:0 8px 24px #233d3020;min-width:182px}.map-legend h4{font-size:10px;text-transform:uppercase;letter-spacing:1.3px;margin:0 0 10px}.legend-item{font-size:11px;color:#42544d;display:flex;align-items:center;gap:9px;margin-top:8px}.legend-stroke{height:3px;width:24px;border-radius:3px;display:inline-block}.footnote{position:absolute;right:16px;bottom:28px;max-width:270px;pointer-events:none;text-align:right;font-size:10px;line-height:1.6;color:#66746c;background:rgba(255,253,249,.93);padding:10px 12px;border-radius:6px;z-index:600}.stop-pin{width:28px;height:28px;display:grid;place-items:center;border:2px solid #fff;background:var(--pine);border-radius:50%;box-shadow:0 2px 12px #26383065;color:white;font-weight:700;font-size:12px}.stop-pin.selected{width:34px;height:34px;background:var(--red);border-width:3px;box-shadow:0 0 0 5px rgba(174,86,61,.20),0 3px 12px #26383065}.leaflet-popup-content-wrapper{border-radius:10px}.popup img{width:188px;height:100px;object-fit:cover;border-radius:6px;margin-bottom:7px}.popup strong{font:700 14px 'Libre Baskerville',serif}.popup p{font-size:11px;line-height:1.5;margin:5px 0 9px}.popup button{background:var(--pine);color:#fff;border:0;border-radius:5px;padding:8px 11px;font-size:11px;font-weight:700}
+.maparea{position:relative;min-height:470px}#map{width:100%;height:100%;background:#e8e6df}.leaflet-control-attribution{font-size:9px!important}
+#basemapStatus{position:absolute;z-index:620;top:20px;left:50%;transform:translateX(-50%);font:700 11px/1.3 'DM Sans',sans-serif;letter-spacing:.2px;border:1px solid #d1d9d1;border-radius:7px;background:rgba(255,253,249,.96);color:#3f6861;padding:9px 13px;text-align:center;pointer-events:none;max-width:225px;box-shadow:0 4px 15px #19322c12}.map-brand{position:absolute;z-index:600;left:22px;top:20px;max-width:calc(100% - 44px);pointer-events:none}.map-brand h2{font:700 24px 'Libre Baskerville',serif;margin:0 0 6px;background:rgba(255,253,249,.94);display:table;padding:12px 15px 5px;border-radius:7px 7px 0 0}.map-brand p{font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:#62766b;background:rgba(255,253,249,.94);margin:0;display:table;padding:0 15px 13px;border-radius:0 0 7px 7px}.maptools{z-index:620;position:absolute;right:20px;top:22px;display:flex;flex-direction:column;gap:8px}.maptools button{font-size:12px;color:var(--pine);background:rgba(255,253,249,.97);border:1px solid #ddd8d0;padding:11px 14px;border-radius:8px;box-shadow:0 4px 18px rgba(39,57,48,.10);font-weight:700}.map-legend{position:absolute;bottom:27px;left:22px;z-index:600;background:rgba(255,253,249,.96);border:1px solid #e2ddd3;padding:14px 16px;border-radius:8px;box-shadow:0 8px 24px #233d3020;min-width:182px}.map-legend h4{font-size:10px;text-transform:uppercase;letter-spacing:1.3px;margin:0 0 10px}.legend-item{font-size:11px;color:#42544d;display:flex;align-items:center;gap:9px;margin-top:8px}.legend-stroke{height:3px;width:24px;border-radius:3px;display:inline-block}.footnote{position:absolute;right:16px;bottom:28px;max-width:270px;pointer-events:none;text-align:right;font-size:10px;line-height:1.6;color:#66746c;background:rgba(255,253,249,.93);padding:10px 12px;border-radius:6px;z-index:600}.stop-pin{width:28px;height:28px;display:grid;place-items:center;border:2px solid #fff;background:var(--pine);border-radius:50%;box-shadow:0 2px 12px #26383065;color:white;font-weight:700;font-size:12px}.stop-pin.selected{width:34px;height:34px;background:var(--red);border-width:3px;box-shadow:0 0 0 5px rgba(174,86,61,.20),0 3px 12px #26383065}.leaflet-popup-content-wrapper{border-radius:10px}.popup img{width:188px;height:100px;object-fit:cover;border-radius:6px;margin-bottom:7px}.popup strong{font:700 14px 'Libre Baskerville',serif}.popup p{font-size:11px;line-height:1.5;margin:5px 0 9px}.popup button{background:var(--pine);color:#fff;border:0;border-radius:5px;padding:8px 11px;font-size:11px;font-weight:700}
 .photo-modal{position:fixed;inset:0;z-index:2000;display:none;align-items:center;justify-content:center;background:rgba(11,26,25,.92);padding:40px 72px}.photo-modal.open{display:flex}.modal-main{max-width:100%;max-height:calc(100vh - 160px);object-fit:contain;border-radius:3px;box-shadow:var(--shadow)}.modal-controls{position:absolute;bottom:14px;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:14px;color:#f4f2eb;font-size:12px;text-align:center}.modal-controls button,.modal-close{border:1px solid #c4d4cc7a;background:#264540e5;color:white;border-radius:50%;width:39px;height:39px;font-size:18px}.modal-close{position:absolute;top:17px;right:20px}.modal-caption{max-width:450px;line-height:1.4}.alert-tile{position:absolute;inset:0;background:#e9e5dc;z-index:100;display:none;justify-content:center;align-items:center;text-align:center;padding:20px;color:var(--pine)}
-@media(max-width:850px){.header{padding:0 14px;height:62px}.brand{font-size:14px}.headerlinks a{display:none}.shell{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(350px,48vh) auto;height:auto;min-height:0;width:100%;overflow-x:hidden}.maparea{grid-row:1;min-height:350px}.narrative{grid-row:2;overflow:visible;min-width:0;max-width:100%}.story-list,.story-card,.story-detail{min-width:0;max-width:100%}.hero{height:220px}.map-brand h2{font-size:16px;padding:9px 11px 5px}.map-brand p{font-size:9px;padding:0 11px 9px}.maptools{top:75px;right:12px}.maptools button{font-size:10px;padding:9px}.map-legend{left:10px;bottom:20px;min-width:150px;padding:8px 10px}.legend-item{font-size:9px;margin-top:5px}.footnote{max-width:150px;right:8px;bottom:18px;padding:6px 8px;font-size:8px}.photo-modal{padding:25px 10px}.modal-main{max-height:calc(100vh - 160px)} }
+@media(max-width:850px){.header{padding:0 14px;height:62px}.brand{font-size:14px}.headerlinks a{display:none}.shell{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(350px,48vh) auto;height:auto;min-height:0;width:100%;overflow-x:hidden}.maparea{grid-row:1;min-height:350px}.narrative{grid-row:2;overflow:visible;min-width:0;max-width:100%}.story-list,.story-card,.story-detail{min-width:0;max-width:100%}.hero{height:220px}.map-brand h2{font-size:16px;padding:9px 11px 5px}.map-brand p{font-size:9px;padding:0 11px 9px}.maptools{top:100px;right:12px}#basemapStatus{top:68px;left:11px;transform:none;font-size:9px;max-width:165px;padding:6px 8px}.maptools button{font-size:10px;padding:9px}.map-legend{left:10px;bottom:20px;min-width:150px;padding:8px 10px}.legend-item{font-size:9px;margin-top:5px}.footnote{max-width:150px;right:8px;bottom:18px;padding:6px 8px;font-size:8px}.photo-modal{padding:25px 10px}.modal-main{max-height:calc(100vh - 160px)} }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
 </head>
@@ -29,9 +30,9 @@
  <div class="chapter-heading">Etapas del recorrido <span id="stageCounter">08 paradas</span></div><div class="story-list" id="stops"></div>
  <div class="ending"><h3>Del mapa al grafo</h3><p>Las rutas trazadas muestran desplazamientos registrados. Las fotografías añaden escenas que necesitan contexto. El grafo permite expresar, con fuentes y relaciones explícitas, qué ocurrió, dónde y en qué secuencia.</p><p>Los registros GPS son de 2026; el grafo presentado en la investigación fue construido inicialmente a partir de trabajo de campo de 2025. <a href="https://javier-vz.github.io/kg-llm/grafo_interactivo.html" target="_blank" rel="noopener noreferrer">Abrir el grafo de conocimiento ↗</a></p><p><strong>Revisión antes de publicar:</strong> confirmar topónimos, etapas y fotografías; verificar permisos, créditos y sensibilidad de lugares y personas. Estas imágenes no tienen metadatos GPS.</p></div>
 </aside>
-<section class="maparea" aria-label="Mapa geográfico de la peregrinación"><div id="map"></div><div id="mapFallback" class="alert-tile">El mapa requiere conexión para cargar Leaflet y el mapa base. Las fotografías y el relato siguen disponibles.</div>
+<section class="maparea" aria-label="Mapa geográfico de la peregrinación"><div id="map"></div><div id="basemapStatus" role="status" aria-live="polite">Vista GPS local</div><div id="mapFallback" class="alert-tile">El mapa requiere conexión para cargar Leaflet y el mapa base. Las fotografías y el relato siguen disponibles.</div>
  <div class="map-brand"><h2>Qoyllur Rit’i · 2026</h2><p>Itinerario documentado · aproximación cartográfica</p></div>
- <div class="maptools"><button id="fitAll" title="Centrar el recorrido completo">⤢ &nbsp; Todo el recorrido</button><button id="prevStop" title="Parada anterior">← &nbsp; Anterior</button><button id="nextStop" title="Parada siguiente">Siguiente &nbsp; →</button><button id="basemapToggle" title="Cambiar entre mapa de calles y mapa topográfico">Relieve ↔</button></div>
+ <div class="maptools"><button id="fitAll" title="Centrar el recorrido completo">⤢ &nbsp; Todo el recorrido</button><button id="prevStop" title="Parada anterior">← &nbsp; Anterior</button><button id="nextStop" title="Parada siguiente">Siguiente &nbsp; →</button><button id="basemapToggle" title="Cambiar entre mapa de calles y mapa topográfico">Mostrar relieve</button></div>
  <div class="map-legend"><h4>Tramos GPS registrados</h4><div class="legend-item"><span class="legend-stroke" style="background:#507872"></span>Aproximación</div><div class="legend-item"><span class="legend-stroke" style="background:#bf8546"></span>Santuario y altura</div><div class="legend-item"><span class="legend-stroke" style="background:#ab5847"></span>Lomada y retorno</div></div><div class="footnote">12 trazas GPS simplificadas · puntos de referencia y extremos de traza<br>Rutas exploratorias, no cartografía ritual validada</div>
 </section>
 </main>
@@ -55,27 +56,66 @@ function pinHtml(num,on){return `<div class="stop-pin ${on?'selected':''}">${num
 if(typeof L!=='undefined'){
  map=L.map('map',{zoomControl:false,scrollWheelZoom:false,preferCanvas:true});
  L.control.zoom({position:'bottomright'}).addTo(map);
- // Mapa base OpenStreetMap: no requiere clave API. Las trazas GPX permanecen intactas.
-  // Dos mapas base alternativos. Solo se carga el seleccionado.
-  const osmLayer=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-   maxZoom:19,keepBuffer:6,updateWhenIdle:true,
-   attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a>'
-  });
-  const topoLayer=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
-   maxZoom:18,keepBuffer:6,updateWhenIdle:true,
-   attribution:'Tiles &copy; Esri and the GIS User Community'
-  });
-  let basemapActive=osmLayer;
-  basemapActive.addTo(map);
-  const baseButton=document.getElementById('basemapToggle');
-  baseButton.addEventListener('click',()=>{
-   map.removeLayer(basemapActive);
-   basemapActive=basemapActive===osmLayer?topoLayer:osmLayer;
-   basemapActive.addTo(map);
-   baseButton.textContent=basemapActive===osmLayer?'Relieve ↔':'Calles ↔';
-   map.invalidateSize({pan:false});
-  });
-  osmLayer.on('tileerror',()=>{if(basemapActive===osmLayer){baseButton.title='Si faltan mosaicos del mapa, prueba la opción Relieve';}});
+ // Base local fiable: cartografía de coordenadas, no contiene topografía inventada.
+ const gpsBase=L.imageOverlay('assets/base-gps-local.jpg', [[-13.74199, -71.76019], [-13.2426022, -71.12299]], {interactive:false,opacity:1}).addTo(map);
+ const basemapStatus=document.getElementById('basemapStatus');
+ const baseButton=document.getElementById('basemapToggle');
+ const mapSources={
+   esri:{url:'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',attr:'Tiles © Esri and the GIS User Community',caption:'Relieve topográfico'},
+   osm:{url:'https://tile.openstreetmap.org/{z}/{x}/{y}.png',attr:'© OpenStreetMap contributors',caption:'OpenStreetMap'}
+ };
+ let currentTiles=null,baseKind='local',requestId=0,initialTry=true;
+ function statusMap(message){basemapStatus.textContent=message;}
+ // Nunca mostrar un mosaico parcialmente descargado: las teselas se vuelven
+ // visibles solo cuando el conjunto terminó de cargar sin errores.
+ function selectBasemap(kind){
+   const id=++requestId;
+   if(currentTiles){map.removeLayer(currentTiles);currentTiles=null;}
+   baseKind='local';
+   if(kind==='local'){
+     statusMap('Vista GPS local · funciona sin teselas externas');
+     baseButton.textContent='Mostrar relieve';
+     return;
+   }
+   const src=mapSources[kind];
+   let errors=0,done=false;
+   const tiles=L.tileLayer(src.url,{maxZoom:18,opacity:0,updateWhenIdle:true,keepBuffer:2,attribution:src.attr});
+   currentTiles=tiles;
+   statusMap('Cargando '+src.caption.toLowerCase()+'…');
+   baseButton.textContent='Vista GPS sin mosaicos';
+   function failure(){
+     if(done||id!==requestId)return;
+     done=true;
+     map.removeLayer(tiles);
+     if(currentTiles===tiles)currentTiles=null;
+     if(kind==='esri'&&initialTry){
+       statusMap('Probando el mapa alternativo…');
+       selectBasemap('osm');
+     }else{
+       selectBasemap('local');
+       statusMap('Vista GPS local · la base externa no cargó por completo');
+     }
+   }
+   tiles.on('tileerror',()=>{errors++;if(errors>=1)failure();});
+   tiles.on('load',()=>{
+     if(done||id!==requestId)return;
+     if(errors){failure();return;}
+     done=true;initialTry=false;baseKind=kind;
+     tiles.setOpacity(1);
+     statusMap('Mapa: '+src.caption);
+     baseButton.textContent=kind==='esri'?'Cambiar a OpenStreetMap':'Cambiar a relieve';
+   });
+   tiles.addTo(map);
+   // Una solicitud lenta no deja un tablero parcial: retorna a la base local.
+   setTimeout(()=>{if(!done&&id===requestId)failure();},12000);
+ }
+ baseButton.addEventListener('click',()=>{
+   initialTry=false;
+   if(baseKind==='esri')selectBasemap('osm');
+   else if(baseKind==='osm')selectBasemap('local');
+   else selectBasemap('esri');
+ });
+ selectBasemap('local');
  routes.forEach(r=>{
   let p=L.polyline(r.points,{color:palette[r.phase],weight:3.5,opacity:.8,interactive:true,lineCap:'round',lineJoin:'round'}).addTo(map);p.bindTooltip(safe(r.name),{sticky:true});polylines.push({el:p,phase:r.phase});
  });
