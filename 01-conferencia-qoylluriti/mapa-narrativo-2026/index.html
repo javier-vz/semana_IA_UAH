@@ -1,13 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#102b2b">
-<meta name="description" content="Mapa narrativo del recorrido de Qoyllur Rit’i con fotografías del archivo de campo y trazas GPX de 2026. Versión de trabajo.">
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<meta content="#102b2b" name="theme-color"/>
+<meta content="Mapa narrativo del recorrido de Qoyllur Rit’i con fotografías del archivo de campo y trazas GPX de 2026. Versión de trabajo." name="description"/>
 <title>Qoyllur Rit’i · Territorio, recorrido y memoria</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoT2u+E8YVtC3U=" crossorigin=""/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Libre+Baskerville:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoT2u+E8YVtC3U=" rel="stylesheet">
 <style>
 :root{--pine:#102b2b;--pine-soft:#264442;--sand:#f7f3eb;--paper:#fffdf9;--line:#e4ddd2;--muted:#65716d;--red:#ae563d;--gold:#bb8645;--sea:#448581;--radius:13px;--shadow:0 16px 48px rgba(24,35,29,.14)}
 *{box-sizing:border-box}html,body{margin:0;height:100%;font-family:'DM Sans',sans-serif;color:var(--pine);background:var(--sand)}button,a{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
@@ -18,26 +19,39 @@
 .photo-modal{position:fixed;inset:0;z-index:2000;display:none;align-items:center;justify-content:center;background:rgba(11,26,25,.92);padding:40px 72px}.photo-modal.open{display:flex}.modal-main{max-width:100%;max-height:calc(100vh - 160px);object-fit:contain;border-radius:3px;box-shadow:var(--shadow)}.modal-controls{position:absolute;bottom:14px;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:14px;color:#f4f2eb;font-size:12px;text-align:center}.modal-controls button,.modal-close{border:1px solid #c4d4cc7a;background:#264540e5;color:white;border-radius:50%;width:39px;height:39px;font-size:18px}.modal-close{position:absolute;top:17px;right:20px}.modal-caption{max-width:450px;line-height:1.4}.alert-tile{position:absolute;inset:0;background:#e9e5dc;z-index:100;display:none;justify-content:center;align-items:center;text-align:center;padding:20px;color:var(--pine)}
 @media(max-width:850px){.header{padding:0 14px;height:62px}.brand{font-size:14px}.headerlinks a{display:none}.shell{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(350px,48vh) auto;height:auto;min-height:0;width:100%;overflow-x:hidden}.maparea{grid-row:1;min-height:350px}.narrative{grid-row:2;overflow:visible;min-width:0;max-width:100%}.story-list,.story-card,.story-detail{min-width:0;max-width:100%}.hero{height:220px}.map-brand h2{font-size:16px;padding:9px 11px 5px}.map-brand p{font-size:9px;padding:0 11px 9px}.maptools{top:100px;right:12px}#basemapStatus{top:68px;left:11px;transform:none;font-size:9px;max-width:165px;padding:6px 8px}.maptools button{font-size:10px;padding:9px}.map-legend{left:10px;bottom:20px;min-width:150px;padding:8px 10px}.legend-item{font-size:9px;margin-top:5px}.footnote{max-width:150px;right:8px;bottom:18px;padding:6px 8px;font-size:8px}.photo-modal{padding:25px 10px}.modal-main{max-height:calc(100vh - 160px)} }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* Vista inicial simple: un mapa completo, no un mosaico de teselas */
+.maparea{overflow:hidden;background:#e8efeb}
+.route-overview{position:absolute;inset:0;z-index:760;background:#e8ede8;display:flex;align-items:center;justify-content:center;flex-direction:column;overflow:hidden}
+.route-overview>img{width:100%;height:100%;object-fit:contain;display:block;max-width:100%}
+.gps-open{position:absolute;top:19px;right:20px;border:0;border-radius:30px;padding:12px 17px;background:#102b2b;color:#fff;font:700 12px/1.2 'DM Sans',sans-serif;box-shadow:0 4px 18px #12322b44;cursor:pointer}
+.gps-open:hover{background:#1d5653}
+.gps-back{display:none;position:absolute;right:20px;top:22px;z-index:760;border:1px solid #d1dcd3;background:#fffdfa;color:#102b2b;border-radius:8px;padding:10px 12px;font:700 11px 'DM Sans',sans-serif;cursor:pointer}
+.maparea.overview-mode .map-brand,.maparea.overview-mode .maptools,.maparea.overview-mode .map-legend,.maparea.overview-mode .footnote,.maparea.overview-mode #basemapStatus{display:none!important}
+.maparea:not(.overview-mode) .route-overview{display:none}
+.maparea:not(.overview-mode) .gps-back{display:block}
+.maparea:not(.overview-mode) .maptools{top:70px}
+@media(max-width:850px){.gps-open{top:auto;bottom:14px;right:12px;left:12px;max-width:calc(100% - 24px)}.maparea:not(.overview-mode) .maptools{top:70px}.maparea:not(.overview-mode) .gps-back{top:10px;right:10px}}
 </style>
-</head>
+</link></head>
 <body>
-<header class="header"><div class="brand"><small>Semana de la IA · UAH 2026</small>Qoyllur Rit’i · mapa narrativo</div><div class="headerlinks"><span class="status">Borrador de campo</span><a href="https://javier-vz.github.io/kg-llm/grafo_interactivo.html" target="_blank" rel="noopener noreferrer">Explorar el grafo ↗</a></div></header>
+<header class="header"><div class="brand"><small>Semana de la IA · UAH 2026</small>Qoyllur Rit’i · mapa narrativo</div><div class="headerlinks"><span class="status">Borrador de campo</span><a href="https://javier-vz.github.io/kg-llm/grafo_interactivo.html" rel="noopener noreferrer" target="_blank">Explorar el grafo ↗</a></div></header>
 <main class="shell">
 <aside class="narrative" id="story">
- <section class="hero"><img src="assets/fotos/foto-26.jpg" alt="Vista amplia de participantes de la peregrinación en un paisaje de altura"><div class="hero-copy"><div class="overline">Un recorrido · muchas relaciones</div><h1>Territorio, recorrido<br>y conocimiento situado</h1></div></section>
- <section class="intro"><p>Este recorrido reúne fotografías compartidas para la conferencia y trazas GPS de 2026. Cada parada permite observar un lugar, abrir imágenes y preguntar qué relaciones podemos representar en un grafo de conocimiento.</p><p>Selecciona una etapa o un marcador del mapa. Las fotografías fueron <b>agrupadas provisionalmente</b>: sus archivos no tienen coordenadas geográficas.</p><div class="author">Una investigación colectiva · Javier Vera y Dina Cornejo Meza, con contribuciones de participantes y comunidades. Créditos específicos de fotografías y trabajo de campo pendientes de revisión.</div></section>
- <div class="toolbar" role="group" aria-label="Filtrar el recorrido"><button class="chip" data-filter="todos" aria-pressed="true">Todo el recorrido</button><button class="chip" data-filter="aproximacion" aria-pressed="false">Aproximación</button><button class="chip" data-filter="altura" aria-pressed="false">Altura</button><button class="chip" data-filter="retorno" aria-pressed="false">Lomada y retorno</button></div>
- <div class="chapter-heading">Etapas del recorrido <span id="stageCounter">08 paradas</span></div><div class="story-list" id="stops"></div>
- <div class="ending"><h3>Del mapa al grafo</h3><p>Las rutas trazadas muestran desplazamientos registrados. Las fotografías añaden escenas que necesitan contexto. El grafo permite expresar, con fuentes y relaciones explícitas, qué ocurrió, dónde y en qué secuencia.</p><p>Los registros GPS son de 2026; el grafo presentado en la investigación fue construido inicialmente a partir de trabajo de campo de 2025. <a href="https://javier-vz.github.io/kg-llm/grafo_interactivo.html" target="_blank" rel="noopener noreferrer">Abrir el grafo de conocimiento ↗</a></p><p><strong>Revisión antes de publicar:</strong> confirmar topónimos, etapas y fotografías; verificar permisos, créditos y sensibilidad de lugares y personas. Estas imágenes no tienen metadatos GPS.</p></div>
+<section class="hero"><img alt="Vista amplia de participantes de la peregrinación en un paisaje de altura" src="assets/fotos/foto-26.jpg"/><div class="hero-copy"><div class="overline">Un recorrido · muchas relaciones</div><h1>Territorio, recorrido<br/>y conocimiento situado</h1></div></section>
+<section class="intro"><p>Este recorrido reúne fotografías compartidas para la conferencia y trazas GPS de 2026. Cada parada permite observar un lugar, abrir imágenes y preguntar qué relaciones podemos representar en un grafo de conocimiento.</p><p>Selecciona una etapa o un marcador del mapa. Las fotografías fueron <b>agrupadas provisionalmente</b>: sus archivos no tienen coordenadas geográficas.</p><div class="author">Una investigación colectiva · Javier Vera y Dina Cornejo Meza, con contribuciones de participantes y comunidades. Créditos específicos de fotografías y trabajo de campo pendientes de revisión.</div></section>
+<div aria-label="Filtrar el recorrido" class="toolbar" role="group"><button aria-pressed="true" class="chip" data-filter="todos">Todo el recorrido</button><button aria-pressed="false" class="chip" data-filter="aproximacion">Aproximación</button><button aria-pressed="false" class="chip" data-filter="altura">Altura</button><button aria-pressed="false" class="chip" data-filter="retorno">Lomada y retorno</button></div>
+<div class="chapter-heading">Etapas del recorrido <span id="stageCounter">08 paradas</span></div><div class="story-list" id="stops"></div>
+<div class="ending"><h3>Del mapa al grafo</h3><p>Las rutas trazadas muestran desplazamientos registrados. Las fotografías añaden escenas que necesitan contexto. El grafo permite expresar, con fuentes y relaciones explícitas, qué ocurrió, dónde y en qué secuencia.</p><p>Los registros GPS son de 2026; el grafo presentado en la investigación fue construido inicialmente a partir de trabajo de campo de 2025. <a href="https://javier-vz.github.io/kg-llm/grafo_interactivo.html" rel="noopener noreferrer" target="_blank">Abrir el grafo de conocimiento ↗</a></p><p><strong>Revisión antes de publicar:</strong> confirmar topónimos, etapas y fotografías; verificar permisos, créditos y sensibilidad de lugares y personas. Estas imágenes no tienen metadatos GPS.</p></div>
 </aside>
-<section class="maparea" aria-label="Mapa geográfico de la peregrinación"><div id="map"></div><div id="basemapStatus" role="status" aria-live="polite">Vista GPS local</div><div id="mapFallback" class="alert-tile">El mapa requiere conexión para cargar Leaflet y el mapa base. Las fotografías y el relato siguen disponibles.</div>
- <div class="map-brand"><h2>Qoyllur Rit’i · 2026</h2><p>Itinerario documentado · aproximación cartográfica</p></div>
- <div class="maptools"><button id="fitAll" title="Centrar el recorrido completo">⤢ &nbsp; Todo el recorrido</button><button id="prevStop" title="Parada anterior">← &nbsp; Anterior</button><button id="nextStop" title="Parada siguiente">Siguiente &nbsp; →</button><button id="basemapToggle" title="Cambiar entre mapa de calles y mapa topográfico">Mostrar relieve</button></div>
- <div class="map-legend"><h4>Tramos GPS registrados</h4><div class="legend-item"><span class="legend-stroke" style="background:#507872"></span>Aproximación</div><div class="legend-item"><span class="legend-stroke" style="background:#bf8546"></span>Santuario y altura</div><div class="legend-item"><span class="legend-stroke" style="background:#ab5847"></span>Lomada y retorno</div></div><div class="footnote">12 trazas GPS simplificadas · puntos de referencia y extremos de traza<br>Rutas exploratorias, no cartografía ritual validada</div>
-</section>
+<section aria-label="Mapa geográfico de la peregrinación" class="maparea overview-mode"><div class="route-overview" id="routeOverview"><img alt="Mapa general de Qoyllur Rit’i con las rutas GPS de aproximación, ascenso al santuario y caminata de 24 horas" src="assets/recorrido-general-2026.webp"/><button class="gps-open" id="openGpsMap" type="button">Explorar las trazas GPS en el mapa →</button></div><div id="map"></div><div aria-live="polite" id="basemapStatus" role="status">Vista GPS local</div><div class="alert-tile" id="mapFallback">El mapa requiere conexión para cargar Leaflet y el mapa base. Las fotografías y el relato siguen disponibles.</div>
+<div class="map-brand"><h2>Qoyllur Rit’i · 2026</h2><p>Itinerario documentado · aproximación cartográfica</p></div>
+<div class="maptools"><button id="fitAll" title="Centrar el recorrido completo">⤢   Todo el recorrido</button><button id="prevStop" title="Parada anterior">←   Anterior</button><button id="nextStop" title="Parada siguiente">Siguiente   →</button><button id="basemapToggle" title="Cambiar entre mapa de calles y mapa topográfico">Mostrar relieve</button></div>
+<div class="map-legend"><h4>Tramos GPS registrados</h4><div class="legend-item"><span class="legend-stroke" style="background:#507872"></span>Aproximación</div><div class="legend-item"><span class="legend-stroke" style="background:#bf8546"></span>Santuario y altura</div><div class="legend-item"><span class="legend-stroke" style="background:#ab5847"></span>Lomada y retorno</div></div><div class="footnote">12 trazas GPS simplificadas · puntos de referencia y extremos de traza<br/>Rutas exploratorias, no cartografía ritual validada</div>
+<button class="gps-back" id="showOverview" type="button">← Ver el recorrido completo</button></section>
 </main>
-<div class="photo-modal" id="photoModal" role="dialog" aria-label="Visor de fotografías" aria-modal="true"><button class="modal-close" id="closeModal" aria-label="Cerrar fotografía">×</button><img class="modal-main" id="modalImage" alt="Fotografía ampliada"><div class="modal-controls"><button id="photoPrev" aria-label="Fotografía anterior">‹</button><span class="modal-caption" id="modalCaption"></span><button id="photoNext" aria-label="Fotografía siguiente">›</button></div></div>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<div aria-label="Visor de fotografías" aria-modal="true" class="photo-modal" id="photoModal" role="dialog"><button aria-label="Cerrar fotografía" class="modal-close" id="closeModal">×</button><img alt="Fotografía ampliada" class="modal-main" id="modalImage"/><div class="modal-controls"><button aria-label="Fotografía anterior" id="photoPrev">‹</button><span class="modal-caption" id="modalCaption"></span><button aria-label="Fotografía siguiente" id="photoNext">›</button></div></div>
+<script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="data/paradas.js"></script><script src="data/rutas.js"></script>
 <script>
 (() => {
@@ -157,7 +171,14 @@ document.getElementById('photoPrev').onclick=()=>advancePhoto(-1);document.getEl
 document.getElementById('closeModal').onclick=()=>modal.classList.remove('open');
 modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){modal.classList.remove('open');if(map)map.closePopup();}else if(e.key==='ArrowRight'&&modal.classList.contains('open'))advancePhoto(1);else if(e.key==='ArrowLeft'&&modal.classList.contains('open'))advancePhoto(-1);});
-if(map){setTimeout(()=>map.invalidateSize(),150);}selectStop(0,false,false);
+if(map){setTimeout(()=>map.invalidateSize(),150);}window.QR_refreshMap=()=>{if(map){map.invalidateSize(true);const pts=routes.flatMap(r=>r.points);if(pts.length)map.fitBounds(L.latLngBounds(pts),{padding:[32,36]});}};selectStop(0,false,false);
 })();
 </script>
-</body></html>
+<script>
+(() => {
+const area=document.querySelector('.maparea');
+const overview=()=>{area.classList.add('overview-mode');};
+const interactive=()=>{area.classList.remove('overview-mode');if(window.QR_refreshMap)window.QR_refreshMap();};
+document.getElementById('openGpsMap').addEventListener('click',interactive);
+document.getElementById('showOverview').addEventListener('click',overview);
+})();</script></body></html>
