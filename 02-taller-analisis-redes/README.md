@@ -1,113 +1,71 @@
-# Taller · Análisis de redes para la investigación social
+# De una pregunta social a un grafo consultable
 
-## Métodos, casos y herramientas en tiempos de inteligencia artificial
+**Taller metodológico para docentes e investigadores de Ciencias Sociales**  
+**Facultad de Ciencias Sociales · Universidad Alberto Hurtado · Viernes 30 de octubre de 2026 · 10:00–12:00**  
+**Javier Vera Zúñiga y Dina Cornejo Meza**
 
-**Fecha:** Viernes 30 de octubre de 2026  
-**Hora:** 10:00–12:00 h (Chile)  
-**Institución anfitriona:** Facultad de Ciencias Sociales (FACSO), Universidad Alberto Hurtado  
-**Modalidad:** Híbrida, presencial y en línea  
-**Duración:** 2 horas  
-**Público:** Docentes e investigadores de ciencias sociales  
-**Requisitos:** No se necesitan conocimientos previos de programación; se recomienda computador y acceso a internet.
+## ¿De qué trata este taller?
 
-*Actividad coordinada con FACSO. Información logística sujeta a la confirmación institucional.*
+Las Ciencias Sociales estudian personas, instituciones, territorios, documentos y prácticas. Con frecuencia, parte importante de la explicación está en las **relaciones** que las conectan. El análisis de redes permite representar esas conexiones, analizar su estructura e identificar patrones que no siempre son evidentes al examinar cada elemento por separado.
 
-[Volver al inicio](../README.md)
+En esta sesión seguiremos un caso pequeño, construido con datos reales de una investigación sobre Qoyllur Rit’i. Partiremos de una pregunta sencilla —**¿cómo se relaciona el Santuario con otros lugares y acontecimientos?**— y llegaremos a una representación consultable mediante inteligencia artificial.
 
-## Resumen para difusión
+La modalidad principal será una **demostración comentada**. Quienes quieran seguir los pasos en su computador podrán hacerlo, pero no es indispensable tener experiencia en programación.
 
-Muchas preguntas de las ciencias sociales involucran relaciones: entre personas, instituciones, territorios, ideas o prácticas culturales. El análisis de redes ofrece herramientas para representar y estudiar estas conexiones, identificar comunidades, reconocer actores relevantes y explorar estructuras que pueden resultar difíciles de observar mediante otros enfoques.
+### [Abrir el material del taller](index.html)
 
-Este taller introduce los principales conceptos y aplicaciones del análisis de redes a partir de casos de investigación con encuestas, documentos, registros etnográficos y producción científica. Se abordará también cómo la inteligencia artificial puede facilitar la extracción, organización y exploración de información, junto con sus limitaciones metodológicas.
+El documento web contiene las explicaciones, diagramas, tablas, enlaces y ejemplos necesarios para seguir la sesión y reutilizar después el procedimiento.
 
-La actividad combinará explicaciones breves, estudios de caso y un ejercicio práctico de construcción y visualización de redes mediante herramientas gratuitas y accesibles. Está dirigida a docentes e investigadores de ciencias sociales y no requiere conocimientos previos de programación.
+## Recorrido de dos horas
 
-## Pregunta que organiza el taller
-
-> ¿Qué podemos descubrir cuando estudiamos las **relaciones** entre personas, ideas, instituciones, lugares o documentos?
-
-## Objetivos de aprendizaje
-
-Al finalizar, los participantes podrán:
-
-1. Reconocer nodos, vínculos y diferentes formas de construir redes a partir de materiales de investigación social.
-2. Interpretar de manera inicial conceptos como centralidad, intermediación y comunidades.
-3. Distinguir entre coaparición, interacción documentada y otros criterios de definición de vínculos.
-4. Experimentar con un flujo sencillo: **fuente → extracción asistida → revisión → tabla → visualización → interpretación**.
-5. Identificar oportunidades y riesgos al utilizar IA para la preparación de datos relacionales.
-
-## Temario: 120 minutos
-
-| Horario (Chile) | Bloque | Contenido |
+| Duración | Pregunta | Lo que aprenderemos |
 |---|---|---|
-| **10:00–10:10** | Introducción | Preguntas sociales que pueden analizarse relacionalmente. |
-| **10:10–10:25** | Conceptos fundamentales | Nodos, vínculos, comunidades, centralidad e intermediación. Decisiones para convertir fuentes en redes. |
-| **10:25–10:55** | Cuatro estudios de caso | Encuestas, etnografía y patrimonio, bibliometría y análisis de textos. |
-| **10:55–11:05** | Demostración con IA | Extraer relaciones de un fragmento textual y revisar errores de identificación. |
-| **11:05–11:40** | Práctica guiada | Abrir una red preparada, explorar sus vínculos, comparar decisiones de construcción. |
-| **11:40–11:55** | Interpretación y discusión | ¿Qué cambia al definir de otra manera una relación? ¿Qué implica para las conclusiones? |
-| **11:55–12:00** | Cierre | Recursos abiertos y posibles aplicaciones a proyectos de los participantes. |
+| 10 min | ¿Por qué estudiar relaciones? | Distinguir preguntas individuales, estadísticas y relacionales. |
+| 15 min | ¿Qué es un grafo? | Reconocer nodos, aristas, dirección y tipos de vínculos. |
+| 20 min | ¿Cómo se construye? | Registrar nodos, relaciones, metadatos y procedencia en tablas. |
+| 20 min | ¿Qué es Wikidata? | Leer entidades y propiedades, y consultar afirmaciones mediante SPARQL. |
+| 20 min | ¿Qué es un grafo de conocimiento? | Leer triples RDF y comprender el formato Turtle (`.ttl`). |
+| 25 min | ¿Cómo consultar el grafo con IA? | Cargar un grafo en Colab, recuperar evidencias y producir una respuesta opcional. |
+| 10 min | ¿Qué podemos concluir? | Interpretar resultados y reconocer vacíos y sesgos de representación. |
 
-## Estudios de caso
+## El caso de trabajo
 
-| Caso | Pregunta social | Tipo de fuente | Concepto destacado | Material |
-|---|---|---|---|---|
-| **1. Opiniones sobre la ciencia** | ¿Cómo se relacionan diferentes expectativas, reservas y actitudes frente a la ciencia? | Encuesta sobre percepción de ciencia y tecnología en Perú | Redes de asociación; comunidades de respuestas | [Ficha](casos/01-encuesta-ciencia.md) |
-| **2. Qoyllur Rit'i** | ¿Cómo se articulan lugares, actores, prácticas y fuentes? | Registros y textos sobre la festividad | Grafo de conocimiento; modelado de relaciones | [Ficha](casos/02-qoylluriti.md) |
-| **3. Patrimonio y producción científica** | ¿Quién investiga qué temas y desde qué instituciones o territorios? | Publicaciones y metadatos bibliográficos | Redes de colaboración y temas | [Ficha](casos/03-bibliometria-patrimonio.md) |
-| **4. *Martín Rivas*** | ¿Qué relaciones entre personajes y mundos sociales pueden identificarse en un texto? | Fragmento de la novela de Alberto Blest Gana | Extracción de relaciones; coaparición frente a interacción | [Ficha](casos/04-martin-rivas.md) |
+El ejemplo utiliza cinco entidades vinculadas al Santuario del Señor de Qoyllur Rit’i:
 
-Los casos 1 y 2 se apoyan en líneas de investigación ya desarrolladas. El caso bibliométrico se presentará con resultados que puedan verificarse; el ejemplo literario es una **propuesta didáctica** y sus comunidades deberán comprobarse en la red construida, en lugar de presuponerse.
+- La festividad del Señor de Qoyllur Rit’i.
+- El Santuario.
+- Sinakara.
+- Mamachapata.
+- Ausangate.
 
-## Práctica principal
+Sus cuatro relaciones proceden de una **selección verificable del archivo de investigación RDF/Turtle**. El ejemplo no pretende representar toda la festividad. Nos interesa que sea pequeño, interpretable y reproducible.
 
-**Ejercicio:** partir de un breve fragmento textual y construir una representación de relaciones entre personajes, seguida de una comparación con una red ya preparada.
+A continuación consultaremos [Wikidata](https://www.wikidata.org/) como **otra fuente**. Allí la festividad tiene el identificador [Q2408955](https://www.wikidata.org/wiki/Q2408955). No la confundiremos con el Santuario, que es una entidad diferente en el grafo local.
 
-```text
-Fragmento textual
-      ↓
-Extracción asistida por IA
-      ↓
-Verificación de nombres, vínculos y evidencias
-      ↓
-Tabla de relaciones (origen, destino, tipo, evidencia)
-      ↓
-Visualización de un grafo
-      ↓
-Interpretación y discusión metodológica
-```
+## Laboratorio para continuar
 
-La actividad en vivo tendrá **un recorrido principal** y un archivo de respaldo: de este modo, quienes se conecten a distancia o tengan problemas con el chat de IA podrán continuar con los mismos datos. El ejemplo de prueba incluido en este repositorio es **ficticio** y sirve para verificar Gephi Lite y la conversión de formatos; el fragmento real de *Martín Rivas* se incorporará tras seleccionar y comprobar el pasaje.
+El taller incluye un [cuaderno de Google Colab](practica/taller_redes_colab.ipynb) que permite cargar un grafo, examinar relaciones y formular preguntas basadas en sus datos. La búsqueda de evidencias funciona sin contratar un servicio de IA: transforma las relaciones del grafo en frases y utiliza similitud léxica TF–IDF para seleccionar las más pertinentes. No usa embeddings semánticos ni hace razonamiento por múltiples saltos. La respuesta generativa con un modelo pequeño es **opcional**.
 
-**Pregunta metodológica central:** ¿qué cambia si consideramos que dos personajes se relacionan por aparecer en el mismo fragmento, frente a exigir que interactúen explícitamente?
+Para usarlo después de la sesión:
 
-[Acceder a la guía de la práctica →](practica/README.md)
+1. Descargar el cuaderno `.ipynb`.
+2. Abrir [Google Colab](https://colab.research.google.com/) y elegir **Archivo → Subir cuaderno**.
+3. Ejecutar sus celdas en orden; el ejemplo del Santuario viene incluido.
+4. Formular preguntas y comprobar qué relaciones fueron recuperadas.
+5. Para estudiar otro caso, utilizar la celda de carga y seleccionar un archivo de grafo propio.
 
-## Herramientas previstas
+El cuaderno admite formatos habituales, como `.ttl`, GraphML, GEXF y un CSV de relaciones. No es necesario conocer esas extensiones antes del taller: se explican durante el recorrido.
 
-- **Un asistente de IA:** proponer entidades y relaciones a partir de texto, conservando evidencia verificable.
-- **[Gephi Lite](https://gephi.org/gephi-lite/):** abrir, visualizar y explorar una red desde el navegador.
-- **[Google Colab](https://colab.research.google.com/)** *(complementario, no obligatorio durante el taller)*: procesar tablas, calcular métricas y repetir la experiencia después.
-- **[OpenAlex](https://openalex.org/)** *(caso bibliográfico)*: consultar metadatos de producción científica.
+## Fuentes y materiales
 
-## Qué se espera que se lleven los participantes
+- [Material web del taller](index.html).
+- [Laboratorio de Colab y archivos de ejemplo](practica/README.md).
+- [Datos de nodos](practica/datos/nodos_santuario.csv) y [relaciones](practica/datos/relaciones_santuario.csv).
+- [Grafo de ejemplo en Turtle](practica/datos/santuario_ejemplo.ttl).
+- [Anatomía y seis consultas SPARQL comentadas](practica/consultas/ejemplos_sparql.md).
+- [Consulta SPARQL preparada](practica/consultas/wikidata_qoylluriti.rq) y [datos públicos de respaldo](practica/datos/wikidata_respaldo.csv).
+- [Conferencia del miércoles: *Un grafo construido entre muchos*](../01-conferencia-qoylluriti/).
 
-- Un vocabulario básico para discutir redes con criterio metodológico.
-- Un archivo de ejemplo que puedan abrir y explorar.
-- Un procedimiento simple para convertir textos o registros en relaciones explícitas.
-- Preguntas críticas para evaluar la extracción asistida por IA y la interpretación de los resultados.
+**Sobre las fuentes.** La red del Santuario es una selección del grafo de investigación facilitado para el taller; las afirmaciones de Wikidata proceden de una base pública colaborativa cuyos contenidos pueden cambiar. Toda respuesta generada debe verificarse contra las relaciones y fuentes recuperadas. No se deben compartir en servicios externos archivos con datos personales o información que requiera resguardo.
 
-## Organización de los materiales
-
-- [`casos/`](casos/): cuatro fichas metodológicas breves.
-- [`practica/`](practica/): guía, prompt, datos ficticios y conversor a GEXF.
-- `diapositivas/`: presentación final del taller, pendiente.
-- `figuras/`: visualizaciones definitivas, pendientes.
-
-## Criterios de trabajo
-
-- **La pregunta de investigación guía la construcción del grafo.**
-- Cada relación debería poder rastrearse hasta un criterio de codificación o una evidencia.
-- Una medida de centralidad es una propiedad del grafo construido; su interpretación sustantiva requiere contexto.
-- La IA puede equivocarse al identificar entidades, unificar nombres o inferir vínculos. Las salidas se revisarán.
-- Se utilizarán fuentes abiertas o autorizadas; no se compartirán datos personales sensibles de participantes.
+**Créditos:** Javier Vera Zúñiga y Dina Cornejo Meza, en diálogo con los equipos y comunidades que participan en las investigaciones. Las fuentes patrimoniales y publicaciones conservan sus respectivas atribuciones y condiciones de uso.

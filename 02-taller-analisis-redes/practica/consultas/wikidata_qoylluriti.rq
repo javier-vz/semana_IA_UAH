@@ -1,0 +1,13 @@
+# Wikidata · Qoyllur Rit’i (Q2408955)
+# 4 relaciones de ejemplo, comprobables en el elemento de Wikidata.
+# P17: país; P131: entidad territorial; P31: instancia de.
+SELECT ?relacion ?entidad ?entidadLabel WHERE {
+  VALUES (?relacion ?propiedad) {
+    ("país" wdt:P17)
+    ("división administrativa" wdt:P131)
+    ("tipo" wdt:P31)
+  }
+  wd:Q2408955 ?propiedad ?entidad.
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "es,en". }
+}
+LIMIT 20

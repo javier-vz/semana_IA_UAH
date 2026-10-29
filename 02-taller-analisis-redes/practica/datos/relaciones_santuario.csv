@@ -1,0 +1,5 @@
+﻿origen,destino,tipo,fuente,evidencia
+FestividadQoylluriti,SantuarioQoylluriti,ocurreEnLugar,TTL del proyecto Qoyllur Rit’i,<http://example.org/festividades#FestividadQoylluriti> <http://example.org/festividades#ocurreEnLugar> <http://example.org/festividades#SantuarioQoylluriti>
+SantuarioQoylluriti,Sinakara,estaEn,TTL del proyecto Qoyllur Rit’i,<http://example.org/festividades#SantuarioQoylluriti> <http://example.org/festividades#estaEn> <http://example.org/festividades#Sinakara>
+Sinakara,Ausangate,estaEn,TTL del proyecto Qoyllur Rit’i,<http://example.org/festividades#Sinakara> <http://example.org/festividades#estaEn> <http://example.org/festividades#Ausangate>
+SantuarioQoylluriti,Mamachapata,contiene,TTL del proyecto Qoyllur Rit’i,<http://example.org/festividades#SantuarioQoylluriti> <http://example.org/festividades#contiene> <http://example.org/festividades#Mamachapata>

@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-10-29">
+    <creator>NetworkX 3.6.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="edge">
+      <attribute id="4" title="tipo" type="string" />
+      <attribute id="5" title="fuente" type="string" />
+      <attribute id="6" title="evidencia" type="string" />
+    </attributes>
+    <attributes mode="static" class="node">
+      <attribute id="0" title="etiqueta" type="string" />
+      <attribute id="1" title="tipo" type="string" />
+      <attribute id="2" title="descripcion" type="string" />
+      <attribute id="3" title="fuente" type="string" />
+    </attributes>
+    <nodes>
+      <node id="FestividadQoylluriti" label="FestividadQoylluriti">
+        <attvalues>
+          <attvalue for="0" value="Festividad del Señor de Qoyllur Rit'i" />
+          <attvalue for="1" value="Festividad" />
+          <attvalue for="2" value="Peregrinación andina de carácter ritual que se realiza anualmente en el área de Sinakara en honor al Señor de Qoyllur Rit'i. La festividad tiene una duración aproximada de 5 días (120 horas), comenzando con la llegada de peregrinos y culminando con el retorno a sus comunidades. Es una de las festividades religiosas más importantes de los Andes peruanos, congregando a decenas de miles de peregrinos de múltiples naciones. La festividad sincretiza elementos del catolicismo colonial con tradiciones andinas ancestrales, siendo el culto al Apu Ausangate un eje fundamental. Incluye eventos clave como la subida ritual al glaciar Colque Punku, la lomada (caminata nocturna de 24 horas), procesiones, misas especiales y complejos sistemas de intercambio simbólico entre comunidades participantes." />
+          <attvalue for="3" value="TTL del proyecto Qoyllur Rit’i (subgrafo seleccionado)" />
+        </attvalues>
+      </node>
+      <node id="SantuarioQoylluriti" label="SantuarioQoylluriti">
+        <attvalues>
+          <attvalue for="0" value="Santuario del Señor de Qoyllur Rit'i" />
+          <attvalue for="1" value="Lugar; LugarSagrado" />
+          <attvalue for="2" value="Santuario de alta montaña donde se concentra la peregrinación anual del Señor de Qoyllur Rit’i." />
+          <attvalue for="3" value="TTL del proyecto Qoyllur Rit’i (subgrafo seleccionado)" />
+        </attvalues>
+      </node>
+      <node id="Sinakara" label="Sinakara">
+        <attvalues>
+          <attvalue for="0" value="Sinakara" />
+          <attvalue for="1" value="Lugar; LugarSagrado" />
+          <attvalue for="2" value="Área montañosa sagrada ubicada en las faldas del nevado Ausangate, donde se encuentra el Santuario del Señor de Qoyllur Rit'i. Sinakara es el centro geográfico de la peregrinación anual y concentra los eventos principales de la festividad." />
+          <attvalue for="3" value="TTL del proyecto Qoyllur Rit’i (subgrafo seleccionado)" />
+        </attvalues>
+      </node>
+      <node id="Mamachapata" label="Mamachapata">
+        <attvalues>
+          <attvalue for="0" value="Mamachapata" />
+          <attvalue for="1" value="Lugar" />
+          <attvalue for="2" value="Área dentro del recinto del santuario hacia donde se dirige la procesión con la imagen del Señor de Tayankani." />
+          <attvalue for="3" value="TTL del proyecto Qoyllur Rit’i (subgrafo seleccionado)" />
+        </attvalues>
+      </node>
+      <node id="Ausangate" label="Ausangate">
+        <attvalues>
+          <attvalue for="0" value="Ausangate" />
+          <attvalue for="1" value="Apu" />
+          <attvalue for="2" value="Apu Ausangate es el espíritu protector de la montaña más alta de la región Cusco (6384 msnm). En la cosmovisión andina, es uno de los apus más importantes. El nevado Ausangate contiene el glaciar Colque Punku, donde se realizan rituales durante Qoyllur Rit'i." />
+          <attvalue for="3" value="TTL del proyecto Qoyllur Rit’i (subgrafo seleccionado)" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="FestividadQoylluriti" target="SantuarioQoylluriti" id="0">
+        <attvalues>
+          <attvalue for="4" value="ocurreEnLugar" />
+          <attvalue for="5" value="TTL del proyecto Qoyllur Rit’i" />
+          <attvalue for="6" value="&lt;http://example.org/festividades#FestividadQoylluriti&gt; &lt;http://example.org/festividades#ocurreEnLugar&gt; &lt;http://example.org/festividades#SantuarioQoylluriti&gt;" />
+        </attvalues>
+      </edge>
+      <edge source="SantuarioQoylluriti" target="Sinakara" id="1">
+        <attvalues>
+          <attvalue for="4" value="estaEn" />
+          <attvalue for="5" value="TTL del proyecto Qoyllur Rit’i" />
+          <attvalue for="6" value="&lt;http://example.org/festividades#SantuarioQoylluriti&gt; &lt;http://example.org/festividades#estaEn&gt; &lt;http://example.org/festividades#Sinakara&gt;" />
+        </attvalues>
+      </edge>
+      <edge source="SantuarioQoylluriti" target="Mamachapata" id="2">
+        <attvalues>
+          <attvalue for="4" value="contiene" />
+          <attvalue for="5" value="TTL del proyecto Qoyllur Rit’i" />
+          <attvalue for="6" value="&lt;http://example.org/festividades#SantuarioQoylluriti&gt; &lt;http://example.org/festividades#contiene&gt; &lt;http://example.org/festividades#Mamachapata&gt;" />
+        </attvalues>
+      </edge>
+      <edge source="Sinakara" target="Ausangate" id="3">
+        <attvalues>
+          <attvalue for="4" value="estaEn" />
+          <attvalue for="5" value="TTL del proyecto Qoyllur Rit’i" />
+          <attvalue for="6" value="&lt;http://example.org/festividades#Sinakara&gt; &lt;http://example.org/festividades#estaEn&gt; &lt;http://example.org/festividades#Ausangate&gt;" />
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

@@ -1,59 +1,50 @@
-# Práctica guiada · Del texto a la red
+# Laboratorio · del grafo pequeño a la consulta con evidencias
 
-Esta práctica está pensada para participantes de ciencias sociales y humanidades sin experiencia previa en programación. Se usará durante el taller del viernes 30 de octubre de 2026.
+El cuaderno **[taller_redes_colab.ipynb](taller_redes_colab.ipynb)** reproduce las operaciones del taller utilizando datos basados en el TTL sobre Qoyllur Rit’i.
 
-## Objetivo
+## Primera prueba
 
-Construir e interpretar una red pequeña y mostrar cómo las reglas de codificación influyen en sus resultados.
+1. Abre [Google Colab](https://colab.research.google.com/).
+2. Selecciona **Archivo → Subir cuaderno** y elige el archivo `.ipynb` de esta carpeta.
+3. Ejecuta las celdas desde el principio. La demostración del grafo de ejemplo está **incluida** dentro del notebook.
+4. Examina la red de cinco nodos y cuatro relaciones. Los CSV y el TTL de `datos/` están disponibles para leerlos o reutilizarlos en otros programas.
+5. Prueba la consulta a Wikidata. Cuando no hay respuesta del servicio, aparece una **copia de respaldo identificada**, nunca una simulación presentada como resultado en vivo.
+6. En la sección **Mini Graph-RAG**, cambia `PREGUNTA` y vuelve a ejecutar las celdas de recuperación y prompt.
+7. Para subir un grafo distinto, ejecuta solo la celda **Subir otro grafo**. Las sesiones de Colab no se guardan para siempre: descarga cualquier resultado que quieras conservar.
 
-## Secuencia para el taller
+## Datos disponibles
 
-1. **Leer** un fragmento corto y definir qué cuenta como relación.
-2. **Extraer** una tabla preliminar con ayuda de un modelo de IA. Usar el [prompt orientativo](prompts/extraccion-relaciones.md).
-3. **Revisar** los personajes, las variantes de nombre y la evidencia textual de cada vínculo.
-4. **Abrir** en [Gephi Lite](https://gephi.org/gephi-lite/) un archivo GEXF preparado como respaldo.
-5. **Explorar** grupos de nodos, conexiones y posibles intermediarios.
-6. **Comparar** cómo se modifica la red bajo un criterio alternativo de vínculos.
-7. **Interpretar** los resultados con cautela: son propiedades de una codificación concreta.
-
-## Material disponible desde ahora
-
-El subdirectorio [`datos/`](datos/) contiene una red **totalmente ficticia** de ocho personas y diez relaciones, creada solo para comprobar la visualización. No corresponde a *Martín Rivas*, Qoyllur Rit'i ni a una encuesta.
-
-| Archivo | Contenido |
+| Archivo | Qué contiene |
 |---|---|
-| `datos/ejemplo_nodos.csv` | Identificador, etiqueta y grupo ficticio de cada nodo |
-| `datos/ejemplo_aristas.csv` | Origen, destino, tipo y peso de cada relación |
-| `resultados/ejemplo_red.gexf` | El mismo ejemplo, listo para abrir en Gephi Lite |
-| `scripts/csv_a_gexf.py` | Conversor sencillo, sin dependencias externas |
+| [`datos/santuario_ejemplo.ttl`](datos/santuario_ejemplo.ttl) | 26 triples seleccionados del TTL compartido, incluidos cuatro vínculos analíticos y metadatos reales |
+| [`datos/nodos_santuario.csv`](datos/nodos_santuario.csv) | Cinco nodos, tipo, etiquetas, breve descripción y procedencia |
+| [`datos/relaciones_santuario.csv`](datos/relaciones_santuario.csv) | Cuatro relaciones con origen, destino, tipo y URI de evidencia |
+| [`datos/wikidata_respaldo.csv`](datos/wikidata_respaldo.csv) | Cuatro relaciones comprobadas de la entidad Q2408955, con fecha y URL de procedencia |
+| [`resultados/grafo_santuario.graphml`](resultados/grafo_santuario.graphml) | Red lista para usar en Gephi Lite y cargar en el notebook |
+| [`resultados/grafo_santuario.gexf`](resultados/grafo_santuario.gexf) | Versión alternativa del mismo grafo (GEXF) |
+| [`consultas/wikidata_qoylluriti.rq`](consultas/wikidata_qoylluriti.rq) | Consulta SPARQL para Q2408955 |
 
-### Prueba rápida
+No se publican datos de campo completos ni se altera el archivo original. Los identificadores `example.org` son URI usados en el proyecto; **no deben interpretarse como URL que puedan abrirse en el navegador**.
 
-1. Entrar a [Gephi Lite](https://gephi.org/gephi-lite/).
-2. Seleccionar la opción para abrir/importar un archivo de grafo.
-3. Cargar [`resultados/ejemplo_red.gexf`](resultados/ejemplo_red.gexf).
-4. Aplicar una disposición de nodos y explorar sus enlaces.
+## Trabajar con otros grafos
 
-### Regenerar el archivo GEXF (opcional)
+El notebook permite cargar `.ttl`, `.rdf`, `.nt`, `.jsonld`, `.graphml`, `.gexf`, y un `.csv` con columnas `origen,destino,tipo` (opcionales: `fuente,evidencia`). Para la lectura de RDF se muestran las conexiones **entre individuos** y se conservan descripciones y tipos como atributos; es una **proyección** del RDF, no una traducción exacta de toda la ontología a una red.
 
-Desde la raíz del repositorio:
+Si la red no contiene propiedades entre individuos, el notebook señalará que no hay aristas; en tal caso se debe revisar el archivo y el criterio de construcción. Una red diferente puede requerir nuevas reglas de limpieza o vinculación.
 
-```bash
-python 02-taller-analisis-redes/practica/scripts/csv_a_gexf.py \
-  --nodos 02-taller-analisis-redes/practica/datos/ejemplo_nodos.csv \
-  --aristas 02-taller-analisis-redes/practica/datos/ejemplo_aristas.csv \
-  --salida 02-taller-analisis-redes/practica/resultados/ejemplo_red.gexf
-```
+## Preguntas útiles
 
-No se requieren instalaciones adicionales: el conversor usa solo la biblioteca estándar de Python 3.
+- «¿Dónde se encuentra el Santuario del Señor de Qoyllur Rit’i?»
+- «¿Qué relación tiene el Santuario con Sinakara?»
+- «¿Qué lugar contiene el Santuario?»
+- «¿Quién construyó el Santuario?» — **pregunta de control**: el ejemplo no contiene esa información, por lo que no debe construirse una respuesta histórica a partir de esas cuatro aristas.
 
-## Archivos que se incorporarán
+## Qué ocurre en un Graph-RAG
 
-- Texto breve seleccionado de *Martín Rivas* (o enlace a la edición).
-- Tabla de relaciones **revisada** contra el texto.
-- Dos versiones comparables del grafo, con criterios explícitos de construcción.
-- Capturas de respaldo para participantes remotos o problemas de conectividad.
+**Consulta → recuperar relaciones relevantes → construir un contexto con evidencias → generar una respuesta → comprobarla.** El cuaderno implementa de forma explícita las tres primeras etapas; dispone de una **cuarta etapa generativa opcional** con el pequeño modelo Qwen2.5-0.5B-Instruct, sin claves API. La fase de generación exige descargar el modelo y puede ser lenta en CPU.
 
-## Para quien facilita
+No confundas la **similitud de texto** con una prueba de verdad: una consulta puede recuperar un triple relevante pero insuficiente. El criterio de validación es que las afirmaciones de la respuesta se correspondan con relaciones reales del grafo y tengan procedencia conocida.
 
-Priorizar una demostración colectiva y asegurar que el resultado principal sea reproducible. Evitar que el éxito de la práctica dependa de que todos tengan una cuenta de IA o ejecuten código en sus computadores. La interpretación debe incluir las decisiones que generan cada arista.
+## Anatomía de SPARQL y funcionamiento del RAG
+
+Consultar [seis ejemplos comentados de SPARQL](consultas/ejemplos_sparql.md) para investigar clasificación, territorio, fechas, autoría y cantidad de propiedades. El notebook explica el proceso real del mini-RAG: triples del TTL → frases sobre las relaciones → TF–IDF de caracteres → similitud coseno → contexto con marcas [T1] → generación opcional. La recuperación no es búsqueda semántica avanzada ni consulta automáticamente caminos de varios saltos.
